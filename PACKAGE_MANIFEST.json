@@ -1,0 +1,1898 @@
+{
+  "source_commit": "b08b0b256bccdf2ad342e325da231ef089e8fc8a",
+  "source": "Committed AgentHarness snapshot exported using git archive; no Git object database or history.",
+  "files": [
+    {
+      "path": "AgentHarness/.env.example",
+      "bytes": 369,
+      "sha256": "d91d036150cfb04030c5880ec6121fd1f7fcdaa09a6c4bab8219325adab12e2c"
+    },
+    {
+      "path": "AgentHarness/.github/workflows/ci.yml",
+      "bytes": 1083,
+      "sha256": "eb320f8bb790619d78504c4a2df896a1d7d45aa38d7e04c20f14f3b00cde1a96"
+    },
+    {
+      "path": "AgentHarness/.gitignore",
+      "bytes": 1120,
+      "sha256": "0d7db57ce939bda6a64c13c341d3f967658e6402d0afbe4295e9d727a20e9d2f"
+    },
+    {
+      "path": "AgentHarness/LICENSE",
+      "bytes": 11299,
+      "sha256": "59b5364bf7b600644c58850ce58a9fcb5ff617053eb8683f92818b744a1a2ed1"
+    },
+    {
+      "path": "AgentHarness/README.md",
+      "bytes": 7210,
+      "sha256": "47e2bc810ae7711f5636ac987e6024827c1cde220ec4ba21f68e7bc9e5c95494"
+    },
+    {
+      "path": "AgentHarness/agent_harness/__init__.py",
+      "bytes": 88,
+      "sha256": "50c4484d555e72698e5b042f8e3daf98950144b1f5ef47038f7f3a7844c25f68"
+    },
+    {
+      "path": "AgentHarness/agent_harness/components/__init__.py",
+      "bytes": 340,
+      "sha256": "d4e4ac5038bc20a2d48da110d8483a5a29d63ccb61dc275c4e3a008faec5b8a2"
+    },
+    {
+      "path": "AgentHarness/agent_harness/components/middleware/__init__.py",
+      "bytes": 453,
+      "sha256": "58c19a2291771e5327ea6ae147363181ba614ac367d79becd675570d12fcc1b2"
+    },
+    {
+      "path": "AgentHarness/agent_harness/components/middleware/base.py",
+      "bytes": 2535,
+      "sha256": "140c633c7e7e967bbb1c6fe943d1769e22e0be1ab07ff362c5e7e820be8f5033"
+    },
+    {
+      "path": "AgentHarness/agent_harness/components/middleware/llm/__init__.py",
+      "bytes": 788,
+      "sha256": "8a8d04a55893f88c9cd0c8d555524fc134ea6cf9b000312cc583f7a5b0c70941"
+    },
+    {
+      "path": "AgentHarness/agent_harness/components/middleware/llm/base.py",
+      "bytes": 5894,
+      "sha256": "c651f2f375764fd64ed2752369bc66057066c006c13988026cf1ab6377131070"
+    },
+    {
+      "path": "AgentHarness/agent_harness/components/middleware/llm/proxy.py",
+      "bytes": 6421,
+      "sha256": "68b8954284442eb8bf96e2cd98ba87c0641c4c5fedf90586a212d1a14fdbb3b1"
+    },
+    {
+      "path": "AgentHarness/agent_harness/components/middleware/llm/summarization.py",
+      "bytes": 5521,
+      "sha256": "2023954203bb54b30639479a92551bf489d1e3d679d26e36c71e7c4fea48d7ff"
+    },
+    {
+      "path": "AgentHarness/agent_harness/components/observers/__init__.py",
+      "bytes": 143,
+      "sha256": "cf5df7e3c18802e91a1a6c36f67b9f61c0a00365b6cc918da1f4d365499dbf0e"
+    },
+    {
+      "path": "AgentHarness/agent_harness/components/observers/budget_observer.py",
+      "bytes": 2950,
+      "sha256": "57e8ae07903c4495407800395b45cfed88245e9e336770ebe555931deba4424e"
+    },
+    {
+      "path": "AgentHarness/agent_harness/components/observers/context_size_guard.py",
+      "bytes": 2711,
+      "sha256": "a59aa16b966cb9be9458100b6cbf2c929530ef755450d9c4d77dcd98d7e8e3e1"
+    },
+    {
+      "path": "AgentHarness/agent_harness/components/observers/leaked_tool_call_retry.py",
+      "bytes": 5521,
+      "sha256": "3fa2a944102f6e7b1fb3b970330738a2ba584ffe68e664dfed08f10cfd6d27d9"
+    },
+    {
+      "path": "AgentHarness/agent_harness/components/observers/react_step_tracker.py",
+      "bytes": 1937,
+      "sha256": "d2dc72a6314b2aa2c14e5014ad88e296ea81b1243da984d7dc1f28f5637b06c3"
+    },
+    {
+      "path": "AgentHarness/agent_harness/components/observers/sse_observer.py",
+      "bytes": 3836,
+      "sha256": "020b0f2753b2f7cad263cabd9f36cebb610f9fb68e044b91e09dac365913d7e6"
+    },
+    {
+      "path": "AgentHarness/agent_harness/components/observers/trajectory.py",
+      "bytes": 13181,
+      "sha256": "27a83df2141315fa0f7a339ca7d73477df3ed2de9eb4e2ee8c0e4d8592b97888"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/__init__.py",
+      "bytes": 60,
+      "sha256": "8b0a5c2fb334b246cd9a733cf5eb0c7d5aee16968242b3b57c49824cc502599c"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/atomic_files.py",
+      "bytes": 764,
+      "sha256": "f2a026cc6bd738d132ad9319739db804f8946069da76530f257f9a977d981f28"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/errors.py",
+      "bytes": 1190,
+      "sha256": "27f87cd4f00233f5de3bd291118d93b1bc06c12dae6fb9f85800cf729df3f3e4"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/events.py",
+      "bytes": 345,
+      "sha256": "4d0d22b59b1ccf44cfe16cc5166c43101fdb4fdbf77768a597d73098596a6a56"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/execution_context.py",
+      "bytes": 2553,
+      "sha256": "b31a257503eddb1973c935eb53d2f17cfdaab739c9e28d07e4d93c87c52e46a6"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/llm.py",
+      "bytes": 2524,
+      "sha256": "cd292e02a1afdf18d0dfaa23e3263a9e56d605d2047c27778e2d643955eadfc4"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/llm_errors.py",
+      "bytes": 1527,
+      "sha256": "0ef888f6ca42e507fd16126384d3dfa7b05900147c3bd95475d0ca13986813c3"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/llm_utils.py",
+      "bytes": 1301,
+      "sha256": "1e30158945118adf41019d62cd9321765e1a43ed27c3182dde94cfcaaeeab5da"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/loop_types.py",
+      "bytes": 16190,
+      "sha256": "9b8e7d98047c0961b64dc36ca9ed53facb3a99792c967b274a1e0eafa4563ce0"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/messages.py",
+      "bytes": 3466,
+      "sha256": "53e6a6d2c85b230e634d4d3aca9b873ea275f69277ae6b8d8cd14a6c2628e7ee"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/protocols.py",
+      "bytes": 2696,
+      "sha256": "b28adf36a6add2362c80eacf07ad3658fd287658df8015c14e76b123756c8fc6"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/__init__.py",
+      "bytes": 552,
+      "sha256": "16682720a9d3f79c73f4466900cca98b7b6835906171fb96ee0f87b78059aa91"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/dag/__init__.py",
+      "bytes": 471,
+      "sha256": "0e699edf0e2a511c499d93484cf1d66d161b97902ae3e22425cfdb062925cf6b"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/dag/graph_builder.py",
+      "bytes": 15319,
+      "sha256": "324908c2f9254252532125dff01bed6e3a9a54475a808568f32817c9c1afa31f"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/dag/minidag.py",
+      "bytes": 13840,
+      "sha256": "e63db023ce51ae597a274c392894de755476e5f92d510c37a99cbb4ce17261ce"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/events/__init__.py",
+      "bytes": 987,
+      "sha256": "7ddf13f0526f60c4d0e221b6c5fcf3076fa51bb8374dba0f585eaacb842d6c84"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/events/bus.py",
+      "bytes": 2036,
+      "sha256": "b0e7b8fae456fe74abba41a5b8e094d4bd0be8cd471876c51c3055ef670d07a9"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/loop/__init__.py",
+      "bytes": 2130,
+      "sha256": "6b5dfff2791aa9453ca56ad1650110b0682e589676bf9a2250f6d5e3cdc1a5e6"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/loop/agent_loop.py",
+      "bytes": 24485,
+      "sha256": "c39e4464f82563de05a560d9274333268dedebf751a3cbe1045e1bf81811e17f"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/loop/compact.py",
+      "bytes": 4153,
+      "sha256": "aec0fec8b1bffabc0a524a352faafcfb2b340a4b4f9a1db890226cbce5ecf74f"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/loop/context_budget.py",
+      "bytes": 1813,
+      "sha256": "bc3cc1bb6de8bcfc3edb7303ba5a75d485e6c80916f2c176db748272b09d2ecd"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/loop/llm_client.py",
+      "bytes": 16884,
+      "sha256": "64995cef3f7061fcbff69bd775dc8c10058b6e2b12f3814925552e9d401899e4"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/loop/model_profile.py",
+      "bytes": 9958,
+      "sha256": "c8913122843a1515603fc7611821ef50618f4fe87798b2d5d11dbacd400a80cd"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/loop/tool_call_parser.py",
+      "bytes": 17099,
+      "sha256": "033f772ee770a21b0edd6351d985e123bb6f0a0bc38c42cf01ab848b6f947e38"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/loop/tool_exec.py",
+      "bytes": 4701,
+      "sha256": "5c319649c60cca62427d58f3d3a81293d3f6f16949f9f060093f3d221f48ff03"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/loop/tool_history.py",
+      "bytes": 3859,
+      "sha256": "edf899f7c9c9ad43cf28d61d1ebbddda56d8cbef1727c19b6967d8d9ca65364a"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/pause_check.py",
+      "bytes": 3269,
+      "sha256": "2c37659a3ae47360baa8ff06a03fe9b7d78760142dcf6429cf17c49c78518726"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/registries/__init__.py",
+      "bytes": 502,
+      "sha256": "83a013a8d23d8539e9f8636fe558d77c5bf3fcd6e8fec11bbf19447a6ff2068f"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/registries/agents.py",
+      "bytes": 1975,
+      "sha256": "33547c46052d73ecd863ff55ffe6e199a732e5eb9b1dae256e6b5177e35e704a"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/registries/services.py",
+      "bytes": 2792,
+      "sha256": "f466b5046cbf323779a72f15e189ec3366425ce2c92bf95ba90d185c21c351fc"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/registries/workflows.py",
+      "bytes": 2619,
+      "sha256": "c059c299e7599be767398b9d2c2ad802d9b1b61d0f5a441fb340cf1b7008d17a"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/registry.py",
+      "bytes": 800,
+      "sha256": "cdb45eb1c04edc7174a25254f7015617f59ac4c6ae44a176465ec44be7e8f5b6"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/resources/__init__.py",
+      "bytes": 743,
+      "sha256": "a2671ac619040968ecb0e9ab14e5b21fd8f262a74cf7a0aa3663d99148e1fc04"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/resources/llm.py",
+      "bytes": 606,
+      "sha256": "47043fe269e29e0e331e505d65493fc67f9aa848c8e117d714e86c0833044a99"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/resources/manager.py",
+      "bytes": 5795,
+      "sha256": "22292f2b9045bbd60a3f8f8a9bcd22520de2556c1dba8c56b13c8a36b850f838"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/resources/permissions.py",
+      "bytes": 1482,
+      "sha256": "f2dcfa4a9d0c0c5ee43ab1061881cebc174bb51d41ae7080c5dbcd7086cb4f6b"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/runtime/resources/tool_permission.py",
+      "bytes": 2621,
+      "sha256": "e993f0ad09d701fce04ee0b3f15d03cf41ba090edb20bf1e6947ced410103d41"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/tool.py",
+      "bytes": 6987,
+      "sha256": "3cdce201998d8e8f89d255e8387fff539b97bcf76b9ef9677574d7ef2fceb8dd"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/types.py",
+      "bytes": 1183,
+      "sha256": "566587a5cbca8a8c8e80c6cb47080942004f6912bf1cd21e5d72540ed9caaaea"
+    },
+    {
+      "path": "AgentHarness/agent_harness/core/web_policy.py",
+      "bytes": 1311,
+      "sha256": "50d8baff4b6f46873241abaa37cc2aee6516e36e5c90f61b371e92726933e922"
+    },
+    {
+      "path": "AgentHarness/agent_harness/infra/__init__.py",
+      "bytes": 61,
+      "sha256": "1a940437c348d1ae6590890cb7e8f10a831079aa920062fdee4d9697b4b57ea4"
+    },
+    {
+      "path": "AgentHarness/agent_harness/infra/anthropic_client.py",
+      "bytes": 8075,
+      "sha256": "25f330bc14d97f5679e9d00886117b3d505cdb07cab407e5e1b4f8dea7b31d04"
+    },
+    {
+      "path": "AgentHarness/agent_harness/infra/config.py",
+      "bytes": 2717,
+      "sha256": "6481935677f43201b6de7f3656a0ae569839fa7a43b8cb48de64024c9725cd04"
+    },
+    {
+      "path": "AgentHarness/agent_harness/infra/llm_adapter.py",
+      "bytes": 1920,
+      "sha256": "3015a52334ba6a920b20b66a20be7eb82bd4600dd3ce0ca0231f071e00447374"
+    },
+    {
+      "path": "AgentHarness/agent_harness/infra/openai_client.py",
+      "bytes": 8265,
+      "sha256": "05f87733dee1164ab1861ab81a4a21a92ceea205e8cfd6cdf22cb930c762a1fe"
+    },
+    {
+      "path": "AgentHarness/agent_harness/infra/retriable.py",
+      "bytes": 2454,
+      "sha256": "4989214b586c32ba33625ad4393f153d30814ca9a56e67b4cc8600e6190db823"
+    },
+    {
+      "path": "AgentHarness/agent_harness/model_registry.yaml",
+      "bytes": 3427,
+      "sha256": "4fa7ae16f0e01ac308e6ead94edbd037ca34691777dd95e12c6b8baa0de2515e"
+    },
+    {
+      "path": "AgentHarness/agent_harness/models/__init__.py",
+      "bytes": 641,
+      "sha256": "7673fd8ccfd5af15e172b8d4123c15b4342991501bd020bf32840022bb5801c3"
+    },
+    {
+      "path": "AgentHarness/agent_harness/models/agent_definition.py",
+      "bytes": 1179,
+      "sha256": "b44494aef111ef86d0321e54e736dc61b56f93bbeb8d08c5d7319d89cc6a4651"
+    },
+    {
+      "path": "AgentHarness/agent_harness/models/node_context.py",
+      "bytes": 1564,
+      "sha256": "5fc3c120e85c4046216332eb7b543717bcbf99e22dd2b9c0944c473f30b90eb8"
+    },
+    {
+      "path": "AgentHarness/agent_harness/models/pipeline_spec.py",
+      "bytes": 8550,
+      "sha256": "50565ccb7c700023368d28625f984f43d0d23d7a5709d5c99372e4cabc1f6e18"
+    },
+    {
+      "path": "AgentHarness/agent_harness/models/task.py",
+      "bytes": 816,
+      "sha256": "4203c6613e085dfc17cab249dcbf3015c47fffad69588b31d748e0b7b9d398e9"
+    },
+    {
+      "path": "AgentHarness/agent_harness/scheduling/__init__.py",
+      "bytes": 71,
+      "sha256": "73366e03e0f78286da9f480d4a8e6493af8bcbecb8294decb726070ac380495d"
+    },
+    {
+      "path": "AgentHarness/agent_harness/scheduling/pipeline_registry.py",
+      "bytes": 1051,
+      "sha256": "37e7c9e24d8ea5ea48d97eaa47ff13efc014cf6413008497387c70f2e213cda3"
+    },
+    {
+      "path": "AgentHarness/agent_harness/scheduling/process_manager.py",
+      "bytes": 4525,
+      "sha256": "34224005b7644bcdf297dc874c8f1c316ef3339035fc473338672b9e39204f48"
+    },
+    {
+      "path": "AgentHarness/agent_harness/scheduling/scheduler.py",
+      "bytes": 18347,
+      "sha256": "2de9d61bc8b2e947004bd6dde740fd580fd5a09b9adc9eeb5e2a9e7369879e4c"
+    },
+    {
+      "path": "AgentHarness/agent_harness/scheduling/workflow_loader.py",
+      "bytes": 2663,
+      "sha256": "779bf94607e4e14a453fade819e23f1852dbbd46ad2363ea3aec598adb838507"
+    },
+    {
+      "path": "AgentHarness/agent_harness/state/__init__.py",
+      "bytes": 274,
+      "sha256": "ee75e3ad0ff6fac52029473cb295b1d13c30672047abf604091c0fbfccc00a6d"
+    },
+    {
+      "path": "AgentHarness/agent_harness/state/event_store/__init__.py",
+      "bytes": 314,
+      "sha256": "85203e98d274226e7959888f49970731b9bc706f6f09a5069d6690c205c2ecf4"
+    },
+    {
+      "path": "AgentHarness/agent_harness/state/event_store/sqlite.py",
+      "bytes": 1555,
+      "sha256": "07e75fb3a596c72277431e5110107ec9e0ff5e031ddac6e7205ba6cc8496684f"
+    },
+    {
+      "path": "AgentHarness/assets/apodex1.0_bench.png",
+      "bytes": 679101,
+      "sha256": "7c9332feb1194d8f1cdcb72da27a37382898ceeb644754bf6cf79205953bbf8e"
+    },
+    {
+      "path": "AgentHarness/assets/apodex_logo.jpeg",
+      "bytes": 33971,
+      "sha256": "5d8034c8817504a9b2b8cc3d7cc189f1c4bfc158fb57aea6a02eaef9fa5ba1f6"
+    },
+    {
+      "path": "AgentHarness/benchmarks/README.md",
+      "bytes": 11746,
+      "sha256": "446e2f169df461500c7aec1a30ca2e2f5fe2924d0ad904a7e5c463ceb2c868ea"
+    },
+    {
+      "path": "AgentHarness/benchmarks/__init__.py",
+      "bytes": 27,
+      "sha256": "6df9006a23e89cab1db56da412b699789eebac3b9cdf18a4db22943b25b5f728"
+    },
+    {
+      "path": "AgentHarness/benchmarks/core/__init__.py",
+      "bytes": 447,
+      "sha256": "1054a7aef8892c16328dbe5da423cf61c9a9ac36f6bf25b8c7327c611c075e51"
+    },
+    {
+      "path": "AgentHarness/benchmarks/core/answer_extractor.py",
+      "bytes": 10469,
+      "sha256": "f912c30e60a9135b80040c94c67d665cf7a8e419d79ce625d4320f73b84c7268"
+    },
+    {
+      "path": "AgentHarness/benchmarks/core/contracts.py",
+      "bytes": 2409,
+      "sha256": "a6875c3deb95dac55a3b9ae77649802dd85e0826b4fd542438c226bb9d203b8b"
+    },
+    {
+      "path": "AgentHarness/benchmarks/core/harbor_task_generator.py",
+      "bytes": 12548,
+      "sha256": "9f646281e31d4f34025754b2890cb238a81975cffbab736fc138f2aeae7cfe6e"
+    },
+    {
+      "path": "AgentHarness/benchmarks/core/kernel_adapter.py",
+      "bytes": 8429,
+      "sha256": "52b8470fd8d8b7d0df62661775c6f738894796f28fdd30ec08c8088d5229f404"
+    },
+    {
+      "path": "AgentHarness/benchmarks/core/profile.py",
+      "bytes": 5293,
+      "sha256": "3db0b3161c46607f30cdea4605a8f7ada433c911ee8d2f08df446393dc27f87c"
+    },
+    {
+      "path": "AgentHarness/benchmarks/core/question.py",
+      "bytes": 523,
+      "sha256": "767543d055ba8b1d3f0924759c07ec603aeb1e6e370cdddd4398a897412ff84c"
+    },
+    {
+      "path": "AgentHarness/benchmarks/core/registry.py",
+      "bytes": 6298,
+      "sha256": "4f95d55a86d789757f639afaa669f7fd9b5e9a5f36c43e5b4a315fef7cb44616"
+    },
+    {
+      "path": "AgentHarness/benchmarks/families/__init__.py",
+      "bytes": 1108,
+      "sha256": "c4e2218c45df9a1b155e20b1e61961ee63d9b12a90a124d88dfeacf9d2495bc2"
+    },
+    {
+      "path": "AgentHarness/benchmarks/families/_schema.py",
+      "bytes": 253,
+      "sha256": "a52870b153846324849ffc09c4b836795659254cdab8ff929800714124cc3d76"
+    },
+    {
+      "path": "AgentHarness/benchmarks/families/browsecomp.py",
+      "bytes": 507,
+      "sha256": "a5932816625b274fb7bd334b34e63a4a79cffaf91737e909c174b54b60cd329f"
+    },
+    {
+      "path": "AgentHarness/benchmarks/families/browsecomp_zh.py",
+      "bytes": 367,
+      "sha256": "33e7fbda24de5c139c2804795a127f62f657a5a7de1944bbb7a38381a4faa4ce"
+    },
+    {
+      "path": "AgentHarness/benchmarks/families/deepresearch_bench_ii.py",
+      "bytes": 553,
+      "sha256": "d3eecfafd467e9607f6dd37cd431a754830c4db24e5f240e44300c8582eaf75a"
+    },
+    {
+      "path": "AgentHarness/benchmarks/families/deepsearchqa.py",
+      "bytes": 434,
+      "sha256": "788031ce08143c7281ff29614a1711fa471716fbab81dd4a3a315e6e65f593c1"
+    },
+    {
+      "path": "AgentHarness/benchmarks/families/frontier_science_olympiad.py",
+      "bytes": 480,
+      "sha256": "1e70b7b3ad8b3d2641986bd05ff651318e736cbee95bb687403ba197cb5f485e"
+    },
+    {
+      "path": "AgentHarness/benchmarks/families/frontier_science_research.py",
+      "bytes": 474,
+      "sha256": "37d5c8e8d9c08276611ad049beda812179119710baf6a9555efa0643a810583c"
+    },
+    {
+      "path": "AgentHarness/benchmarks/families/hle_text.py",
+      "bytes": 403,
+      "sha256": "89bf1cf4a2f5fea2bdb1880c5eb2efe35c25af9d42d59c70f57ec966203f6573"
+    },
+    {
+      "path": "AgentHarness/benchmarks/families/prl_bench.py",
+      "bytes": 440,
+      "sha256": "1ab318647cc09b906504214bb86d91db106e38899385d008cbe77e81957df710"
+    },
+    {
+      "path": "AgentHarness/benchmarks/families/superchem_text.py",
+      "bytes": 469,
+      "sha256": "ade4f737dc4b9e2284836c19435abd1af41fa55a4440d2a54b8f9f6c44c4a421"
+    },
+    {
+      "path": "AgentHarness/benchmarks/families/widesearch.py",
+      "bytes": 506,
+      "sha256": "e39cf22d8601efb30d308325f94eb73907673ccd5d4b7d0043bdd2a39b71e6ed"
+    },
+    {
+      "path": "AgentHarness/benchmarks/families/xbench_dr_202510.py",
+      "bytes": 411,
+      "sha256": "bc90b27da2eebf4bf9f8975b662f6ade282bc29b0208c79b3188cc5056f829c7"
+    },
+    {
+      "path": "AgentHarness/benchmarks/grade_drb.py",
+      "bytes": 14229,
+      "sha256": "c07240fe39605ae0e9c844453c8f7386ab3308a0624951fdc7c28e0aa6e97875"
+    },
+    {
+      "path": "AgentHarness/benchmarks/harbor_agent/__init__.py",
+      "bytes": 122,
+      "sha256": "e0e14e7257a990061c283f604c3726ce1d3202418fdff7e05d567461638ecb7b"
+    },
+    {
+      "path": "AgentHarness/benchmarks/harbor_agent/agent.py",
+      "bytes": 9261,
+      "sha256": "8acefadc1d4f56bf3a6a798c910685fee6b3630f9da663f85ece4c32011b6d3e"
+    },
+    {
+      "path": "AgentHarness/benchmarks/judges/__init__.py",
+      "bytes": 7418,
+      "sha256": "22ff9095b4455d54337c0df08a4102e9abc9736e6f0a4fd6189ab5aacd07f007"
+    },
+    {
+      "path": "AgentHarness/benchmarks/judges/_common.py",
+      "bytes": 6946,
+      "sha256": "ba9d31dbc3c1134c035107bc3d879afb9b4eb8bad2faf08b9ba91ff3020d6705"
+    },
+    {
+      "path": "AgentHarness/benchmarks/judges/browsecomp.py",
+      "bytes": 12236,
+      "sha256": "d1e539904e0130eb7231324ecd5e12b6409df2ab4c4b443032611898b9a4a362"
+    },
+    {
+      "path": "AgentHarness/benchmarks/judges/deepsearchqa.py",
+      "bytes": 11273,
+      "sha256": "5511c7817cd935c6a21c6b28b446e42b7f8fb1d9cb6259787566587672196fbc"
+    },
+    {
+      "path": "AgentHarness/benchmarks/judges/frontier_science.py",
+      "bytes": 10220,
+      "sha256": "957b066ed7350b7e227b372d514ddbe7303e347c6ece47647f4184ce4d618a14"
+    },
+    {
+      "path": "AgentHarness/benchmarks/judges/frontier_science_team.py",
+      "bytes": 3860,
+      "sha256": "5a8ad2f694cbbcef493da16fa88279c3c88b4d7e47cf9070b49bd838a7a6a273"
+    },
+    {
+      "path": "AgentHarness/benchmarks/judges/hle.py",
+      "bytes": 3951,
+      "sha256": "eeb2756b395469e376445ba1b022c6f8f750f90bdd4bb0bfab987c91e6d0c4ee"
+    },
+    {
+      "path": "AgentHarness/benchmarks/judges/prl_bench.py",
+      "bytes": 4592,
+      "sha256": "224002894844ecdd53b1a8580a6af20ada509152381c515ab8788a362907cb64"
+    },
+    {
+      "path": "AgentHarness/benchmarks/judges/widesearch.py",
+      "bytes": 25323,
+      "sha256": "44838ae967e64e2d8e897017c17a53e90c9c0aa0b0783a6741922299fe30171f"
+    },
+    {
+      "path": "AgentHarness/benchmarks/judges/xbench.py",
+      "bytes": 3174,
+      "sha256": "f974cfb6f697f3855c61cc33aa1ae4a70ce61e02f0e88de0920df62fe460a7ec"
+    },
+    {
+      "path": "AgentHarness/benchmarks/prepare_prl.py",
+      "bytes": 5120,
+      "sha256": "593f83d26bae35a8103ec875f92778ae91313ea7a0a89405b6a57fdd8671150a"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/README.md",
+      "bytes": 6157,
+      "sha256": "89f3e3e7db5f4f248f661407dfbe9ae4f78be3fa16d1ccbdba61de3ab20beac0"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/bc200.yaml",
+      "bytes": 1570,
+      "sha256": "56801e98109259a46af2964c314a6253cb1b545e30323ee0630ca16f61be8ae3"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/bc200_semantic.yaml",
+      "bytes": 1498,
+      "sha256": "58a8c2e9a0cf3ee394b2e8e470d36e81e7a621b31706834834486639ecefb373"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/browsecomp.yaml",
+      "bytes": 1468,
+      "sha256": "7fa17c24b77ba0a7814a1e89f46201a5bae3092cfb4507d793652d197e4fd1b9"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/browsecomp_200.yaml",
+      "bytes": 1468,
+      "sha256": "5e33f8cd08ec46fc0bc39465e5ea8aad3213718097d74c5a382930f4d3563bbc"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/browsecomp_zh.yaml",
+      "bytes": 1459,
+      "sha256": "040c7eb69be2e1491560fd88c44ca0225a13af1f5bbacf7397b78c6b586dc3a1"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/deepresearch_bench_ii.yaml",
+      "bytes": 635,
+      "sha256": "fd07b03ce0c2464dc9891fc50a328ea08bfd81d962b1ac9f546406a939b4fd8c"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/deepsearchqa.yaml",
+      "bytes": 355,
+      "sha256": "5886a454ae8d9ab41832f77997bb238511955905fca7508f91e4929d74347519"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/drb_gpt55_medium.yaml",
+      "bytes": 630,
+      "sha256": "b8b03f5f3836412c157108a323c958a19fda43b393963592063df5606dab3a0c"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/frontier_science_olympiad.yaml",
+      "bytes": 474,
+      "sha256": "02ff0fda257bd4b0a2f53fc6a4479e5a65fb33b0e30fd2d8de11c2d322101f93"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/frontier_science_research.yaml",
+      "bytes": 664,
+      "sha256": "738925d6fa461b1332b4c008031f4e45009ac1356b0b552ab47bb37c3e3c0e8d"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/fso86.yaml",
+      "bytes": 546,
+      "sha256": "ef205b4f5f2a622a8f3b92a4c8515e0cc153fe485dc3df226367241fd3fcfa73"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/fsr60.yaml",
+      "bytes": 815,
+      "sha256": "c05cd3a96423935405ad607f1f610797a03ef9ffd4d289e053c6cfead3cdfe47"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/fsr60_agent_team.yaml",
+      "bytes": 840,
+      "sha256": "9c7c350de4584d2785089abffb4aa7f6cb16141f434e704145c9ceda2bed509c"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/hle_text.yaml",
+      "bytes": 164,
+      "sha256": "fdf98c314b81128e68b4a0acc55a70913a48630081880038fd8c57a3bf22f613"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/prl_bench.yaml",
+      "bytes": 186,
+      "sha256": "35047de3b81ad6888524688b79e18a5a4ecfbb9d16fe677b365d90fddd7acf00"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/superchem256.yaml",
+      "bytes": 454,
+      "sha256": "2b288fac9ef9ea4a7796eb0f22ed1359cec8bbc0ef646b827aaf22b4e5aabc3c"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/superchem_text.yaml",
+      "bytes": 352,
+      "sha256": "858c3b54d9fedec820cbfd442460c40dfcc1e2a47898f363e36fcfa2ac6faa04"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/widesearch.yaml",
+      "bytes": 162,
+      "sha256": "e6137e17cbdaa088d6afc392a6b3e7df83bdce47cda5913ca2e60d2f54501be5"
+    },
+    {
+      "path": "AgentHarness/benchmarks/profiles/xbench_dr_202510.yaml",
+      "bytes": 181,
+      "sha256": "8cdf39c24d669c2d18bcc80e4a3ac1e0840d4438d2f8c4244371557277ae67c0"
+    },
+    {
+      "path": "AgentHarness/benchmarks/runner/__init__.py",
+      "bytes": 321,
+      "sha256": "c08fea648fb473a04238d5f83c761b0d456451f6556f76204bace8c4521c80f5"
+    },
+    {
+      "path": "AgentHarness/benchmarks/runner/adopt.py",
+      "bytes": 4581,
+      "sha256": "43a7ac9579ee9e1dd42898101f4eaacc724ef69bb0263a34956cec4d6e7c3e33"
+    },
+    {
+      "path": "AgentHarness/benchmarks/runner/check_progress.py",
+      "bytes": 13039,
+      "sha256": "4345f1f4d792bd931411a9b64724e5c1ff16b97c7761f642b11bf6d37a549928"
+    },
+    {
+      "path": "AgentHarness/benchmarks/runner/judge_config.py",
+      "bytes": 1231,
+      "sha256": "83e64954c26516c0f3d4ba9b15dec846bb28d60af557cbaaa269df3ce0001881"
+    },
+    {
+      "path": "AgentHarness/benchmarks/runner/rejudge.py",
+      "bytes": 8117,
+      "sha256": "8701cfb5229154b08d5c7abc32dacc5cea11accc3bf2b3c207e23ae46fa49405"
+    },
+    {
+      "path": "AgentHarness/benchmarks/runner/run_one_task.py",
+      "bytes": 12419,
+      "sha256": "ef4cf9b4a5e60de0c1136e4681c32ded69633656e30a37a24572954c35117bc8"
+    },
+    {
+      "path": "AgentHarness/benchmarks/runner/run_subprocess.py",
+      "bytes": 24853,
+      "sha256": "41e724391d09ed85535e36bcf87965b5e85c2fad11ca90998ea9e191d1200593"
+    },
+    {
+      "path": "AgentHarness/benchmarks/watch_drb.py",
+      "bytes": 17191,
+      "sha256": "b4c860bea30b087abe9c140cc326c8d670bb5a2af7392b23e20270301cb1e120"
+    },
+    {
+      "path": "AgentHarness/docker/README.md",
+      "bytes": 4947,
+      "sha256": "5d08929701dd9b71ed993ef9119b93f32ac8f69975e8a76e0617d0e8f8f10e63"
+    },
+    {
+      "path": "AgentHarness/docs/agent-design-reference-20260909.md",
+      "bytes": 4432,
+      "sha256": "c4615b4abc5d1b550f224e064c7f81d0ae20898acef14f741d38ee56c9cbfffc"
+    },
+    {
+      "path": "AgentHarness/docs/bc200-runtime-audit-20260909.md",
+      "bytes": 3607,
+      "sha256": "56f64f84b3ec6f0aedc59ab0054c37ba296732e36be6fd9b9e3cde6a8be6dbd6"
+    },
+    {
+      "path": "AgentHarness/docs/dynamic_htn_informed_research_full_migration.zh-CN.md",
+      "bytes": 30876,
+      "sha256": "8f60eff6287c1e4377360cf74ae998f0dda32787626619f18cd02fa2022d5572"
+    },
+    {
+      "path": "AgentHarness/docs/dynamic_htn_informed_research_port_plan.zh-CN.md",
+      "bytes": 29057,
+      "sha256": "cf7da664ea9cdc9ac8e5923355c4bd6e89003ca4a27858d4dfb276e4995313d3"
+    },
+    {
+      "path": "AgentHarness/docs/dynamic_htn_informed_research_tools.zh-CN.md",
+      "bytes": 15229,
+      "sha256": "c5164472ed8c2fce853a8a1b9d71008a72014988a5436f205889b308c3e9f72f"
+    },
+    {
+      "path": "AgentHarness/docs/dynir-flow-review-20260908.md",
+      "bytes": 5005,
+      "sha256": "1427d741aee15f286131bb923bafa2e591bc33c4715a37704aa578ee46399ea1"
+    },
+    {
+      "path": "AgentHarness/docs/frontier_reuse_shortlist.zh-CN.md",
+      "bytes": 8677,
+      "sha256": "f691f7bf45762a9ca46c421e22ed78bd7d7fa5f9e5821b8df437ca205410ca2d"
+    },
+    {
+      "path": "AgentHarness/docs/migration/dynir-implementation-status.zh-CN.md",
+      "bytes": 3135,
+      "sha256": "4313ba34915ad68e12478887f8493a69d6a4e8a59446be8b47d65e24567e4088"
+    },
+    {
+      "path": "AgentHarness/docs/open-source-agent-design-review-20260909.md",
+      "bytes": 20723,
+      "sha256": "72aab61e99247aad5bb6666fdc4e77f70953414ac63ac54304d733ea0a9c1fe8"
+    },
+    {
+      "path": "AgentHarness/docs/reference-durable-workflows-review-20260909.md",
+      "bytes": 14465,
+      "sha256": "ab425e5382db716910a1682408f193bc3d6796a1e7d2ef368a15b2edefdfba83"
+    },
+    {
+      "path": "AgentHarness/docs/reference-execution-feedback-review-20260909.md",
+      "bytes": 12554,
+      "sha256": "9ae1a58de24adec4d875d61add28d1b50a7c576f9e91486c6439977adef86720"
+    },
+    {
+      "path": "AgentHarness/docs/reference-research-context-review-20260909.md",
+      "bytes": 14509,
+      "sha256": "143e89d67dc1f1a11573431b1e24d0b7e7f7ca15df55fc3e1358cc3f0725683b"
+    },
+    {
+      "path": "AgentHarness/plugins/__init__.py",
+      "bytes": 62,
+      "sha256": "5bbb237da2f9a48f05bdfcdc48de5788454d5c3a2fefa8413e5452b0bb8d3640"
+    },
+    {
+      "path": "AgentHarness/plugins/tools/__init__.py",
+      "bytes": 755,
+      "sha256": "0dba1c5434b415457a70be550e35bee60390269666a28ec5d5818f0886067a03"
+    },
+    {
+      "path": "AgentHarness/plugins/tools/run_python_code.py",
+      "bytes": 2869,
+      "sha256": "e600a977f5ee59c10c84c8d186b4cab3e16bfd591189fc5f4cd6df77d07752e2"
+    },
+    {
+      "path": "AgentHarness/plugins/tools/web_fetch.py",
+      "bytes": 15644,
+      "sha256": "c040acf39eb5ad08dd92b40960251f191f8006b6ce4c75b6dfc0ad4d998c6246"
+    },
+    {
+      "path": "AgentHarness/plugins/tools/web_search.py",
+      "bytes": 9494,
+      "sha256": "2c4b3c3b19788bd72c161da446d7488e57f6b31c2287b95b26114ec58a5c7283"
+    },
+    {
+      "path": "AgentHarness/pyproject.toml",
+      "bytes": 921,
+      "sha256": "b77c2d9ad6a92900329750c15a3942a15a62847695517b9e0fd7c9cff3b6e753"
+    },
+    {
+      "path": "AgentHarness/scripts/bc200_openrouter_judge.py",
+      "bytes": 5485,
+      "sha256": "773eae1395a11a04249ef945aff8dbdeece5f72cd041604b8a9b593bde1c81bf"
+    },
+    {
+      "path": "AgentHarness/scripts/benchmark_credentials.py",
+      "bytes": 617,
+      "sha256": "aab67038a128faef5beb883b67084ca785bc606a47c154b95157a1def38d9677"
+    },
+    {
+      "path": "AgentHarness/scripts/docker_agent.py",
+      "bytes": 9244,
+      "sha256": "982c1f948af735c04a0b35bce59e8a7009852cba003a827120f973340ab0f91a"
+    },
+    {
+      "path": "AgentHarness/scripts/docker_job.py",
+      "bytes": 1684,
+      "sha256": "30eaa3e87314d4bbae74dbdfe1600d9745932cc2e1b1b104b84b5dbdeda5ab4a"
+    },
+    {
+      "path": "AgentHarness/scripts/docker_smoke.py",
+      "bytes": 1854,
+      "sha256": "bea2a2dde361d4f87e203b2e4f79c52cfea809a1c4b483f3d2573222fbc36062"
+    },
+    {
+      "path": "AgentHarness/scripts/evaluate-bc200-no-replanning.sh",
+      "bytes": 607,
+      "sha256": "f84f4b7a66f2c8dffb92aa0e921d49ccdb18dd2c1d852ac9a81aef54e10fa5ea"
+    },
+    {
+      "path": "AgentHarness/scripts/evaluate-bc200-v1.sh",
+      "bytes": 804,
+      "sha256": "4873bbe47882ef24895a9e9a5ad6ee86a747ee6e8775a2b476d130c27c46cf2c"
+    },
+    {
+      "path": "AgentHarness/scripts/evaluate-browsecomp.sh",
+      "bytes": 378,
+      "sha256": "d98da5a6a682b10e1342e6dbc0e445f605a7a02422840e3a0e2cf7675f4b1cd7"
+    },
+    {
+      "path": "AgentHarness/scripts/evaluate-browsecomp_zh.sh",
+      "bytes": 387,
+      "sha256": "bd4bc150a9f35eef797d303bff7e89db83225e4dffe1c5cc614b7f76666deb67"
+    },
+    {
+      "path": "AgentHarness/scripts/evaluate-deepsearchqa.sh",
+      "bytes": 383,
+      "sha256": "2d524f580c4cbb4ec26a4e682754083b57e6116cb5b89ea921871499ce7bc67b"
+    },
+    {
+      "path": "AgentHarness/scripts/evaluate-frontier_science_olympiad.sh",
+      "bytes": 422,
+      "sha256": "e2ea5cf2328bac6d4563dcba002a3e76ee3fbd84fcfc6449e72c6ec2cd2c4512"
+    },
+    {
+      "path": "AgentHarness/scripts/evaluate-frontier_science_research.sh",
+      "bytes": 422,
+      "sha256": "7742ae03d33b359c140a9dd7ef7fb9cc027aa81fe3c970a915471074f39ceb30"
+    },
+    {
+      "path": "AgentHarness/scripts/evaluate-hle_text.sh",
+      "bytes": 355,
+      "sha256": "1669b4e9850b59c4c5f31baca9862159f8bf806068d81ab74bda62deb2bd66b1"
+    },
+    {
+      "path": "AgentHarness/scripts/evaluate-prl-bench-v1.sh",
+      "bytes": 637,
+      "sha256": "fb375fce7db545af8a844dfc01308e65e740fa56a3c934da90817cdc4a9bc2be"
+    },
+    {
+      "path": "AgentHarness/scripts/evaluate-superchem_text.sh",
+      "bytes": 389,
+      "sha256": "fa8ae7428663ca43f35ae6761710a13d171e3e20b1a6dfbff9f7c186408b6c3f"
+    },
+    {
+      "path": "AgentHarness/scripts/evaluate-widesearch.sh",
+      "bytes": 361,
+      "sha256": "180c524516ec71a656c822a5ae08cb5164c30f87efca928defd3055c766edf4a"
+    },
+    {
+      "path": "AgentHarness/scripts/evaluate-xbench_dr_202510.sh",
+      "bytes": 379,
+      "sha256": "36bf3dc6cdc3bf2f60960f3e3cc776bb7e891f84eb82551fbed748473eeb301e"
+    },
+    {
+      "path": "AgentHarness/scripts/fsr_backfill.py",
+      "bytes": 3417,
+      "sha256": "4a154a37ac731881599a2801efee4f93a1fbf6de5afc7aa75aca08ab6a9827f4"
+    },
+    {
+      "path": "AgentHarness/scripts/fsr_planning_replay.py",
+      "bytes": 15002,
+      "sha256": "adea441726f16418d2f9f1fe72d18ba2fceed417c55feddbf8ed27566170dc70"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/_dynamic_v1_fixture.py",
+      "bytes": 8583,
+      "sha256": "6f5c8f8ec34d175913d7064a7d232ae676520ac3b050fb5ddce021e6565303c6"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_benchmark_profile.py",
+      "bytes": 8985,
+      "sha256": "eec234baaddb5464660831be19623e1b777c170a72860806fa87d10bbc07e7ab"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_docker_launcher.py",
+      "bytes": 2372,
+      "sha256": "f4dcce233291432c213079b9e95fb66189755921cb6548e1647bef9717af6b1f"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_drb_export.py",
+      "bytes": 9047,
+      "sha256": "28283c62ad02c9861a090d9b2da9f740b390fa2a9db3ff28528208e069188627"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_drb_runner_reliability.py",
+      "bytes": 7510,
+      "sha256": "f0951c61be86ecf325367488ce7a3da5a1dca91683e18b8fe54f6b7d12114e01"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_drb_watch.py",
+      "bytes": 9281,
+      "sha256": "efef1ba064bc73138bb39c0317405c65f0f944ef96df035d48fd02a005f696c8"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_dynamic_pipeline_entry.py",
+      "bytes": 8492,
+      "sha256": "49b38cdf9671c0b70c2977e84ac918669a6890674fad22390821ece46e5f4b53"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_dynamic_research_contracts.py",
+      "bytes": 12706,
+      "sha256": "9465dc19ebe2d249fc35a86e667a0bd4d6120b791375928921e0fde0fcba8cb3"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_dynamic_v1_directory_read.py",
+      "bytes": 6414,
+      "sha256": "79578b2ac709f7884767443655c33fb9fcac432c525f47a7e6e307c27774b752"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_dynamic_v1_entry.py",
+      "bytes": 5008,
+      "sha256": "837d64a12c5af201207dbcabd0cd89044b3c42f91e034427f31f1f8637c01781"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_dynamic_v1_html_extraction.py",
+      "bytes": 11677,
+      "sha256": "151929dc8f67043ecda032cf5d134a2e0ab9ee96241856d419827535a15fe96c"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_dynamic_v1_reasoning_history.py",
+      "bytes": 6204,
+      "sha256": "b08a51b2ee7d4060d09f6edccb4ae49bc3f9ea46d2c3550a1dd83ea07c865314"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_dynamic_v1_report_delivery.py",
+      "bytes": 9875,
+      "sha256": "6140ef44abc876117e1b3369dbad75dd0e221e38b7d278639f2c3de64f695345"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_fsr_judge_profile.py",
+      "bytes": 23004,
+      "sha256": "1ce36658a9180a2a8cc7612c0b320dbe279b1a36c4e0b693ad217226ab8a139e"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_fsr_official_scoring.py",
+      "bytes": 3114,
+      "sha256": "89a88b3ec4c26c9177209b644ed0d9c27a45bd74fa05c8f97bce56d41d3174c3"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_fsr_team_judge.py",
+      "bytes": 4022,
+      "sha256": "ffbdcfa13327310b2b5920af455940ac9e8a174041fd86d0f1bfc7307cf804ba"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_prl_adopt.py",
+      "bytes": 2155,
+      "sha256": "bbdc5a9f9d30283a7d949628c7f49f88a7403f75b20e6c0cb67eb41fcf2d6c6b"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_prl_bench.py",
+      "bytes": 7142,
+      "sha256": "bbf9d7901e1d82fc1deb5dfc6e403eb78b527326aab56b11ead616bfa2bacbd4"
+    },
+    {
+      "path": "AgentHarness/tests/benchmarks/test_storage_recovery.py",
+      "bytes": 6185,
+      "sha256": "5d22b0bc51114e7b0e9b07154f79121ca32466480b5425693f02dac48ff304db"
+    },
+    {
+      "path": "AgentHarness/tests/core/test_llm_quota.py",
+      "bytes": 5883,
+      "sha256": "3e0d4769e90d7ca73598b15314a4448e3b4b02f71c1632ef531f9101004907a3"
+    },
+    {
+      "path": "AgentHarness/tests/core/test_runtime_integrity.py",
+      "bytes": 15062,
+      "sha256": "94c81b9ebafbb05ecfc7e62060a697778863797b1cd4067bf8ca0b221bb9309c"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/fixtures/q10_premise_quotes.json",
+      "bytes": 14003,
+      "sha256": "407b1cd9c7db0cfb8ded469faa068fd24990e637182659e17a600cfe2827d6e7"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_budget_finalization.py",
+      "bytes": 14962,
+      "sha256": "e08bc07606b773dfda9962aa80c9eed3e3c318372e2c3b4d0cf8f319899a630f"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_epoch_recovery.py",
+      "bytes": 24470,
+      "sha256": "01caabe0e7b8f72cbdc38254b6b9654e757fa51d6165f397d6bb89e88f732a23"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_evidence_memory.py",
+      "bytes": 15872,
+      "sha256": "dde34459ef030b5fcc21e65349f7358250442d893873f90528623862e5ece165"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_evidence_readback_integration.py",
+      "bytes": 11742,
+      "sha256": "ab8e748530b818989de86068179d9688929feb5b273039460ff0f106d7923108"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_execution_failure_recovery.py",
+      "bytes": 15827,
+      "sha256": "4c922f4444b21b09da223f98f28fb57ccff0f8c90f5a328e121727b8cbe7cc09"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_fetch_content_quality.py",
+      "bytes": 3551,
+      "sha256": "84f958a3f55c7cd94bdfbc23ade0fa99300eaa8871bfbd09fd3e89c7e5990800"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_html_extraction.py",
+      "bytes": 11659,
+      "sha256": "37ec1bb4ec19d7c1c18ba810c68b89f481e14b283786f49767c3a38b2383ec93"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_native_entry.py",
+      "bytes": 57821,
+      "sha256": "a6606bc89fb02b6de4984d7e6782ce8db7e8d544f442f73bd050e36544c4a3c1"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_native_runtime.py",
+      "bytes": 36101,
+      "sha256": "90f71859e8735d5c2de5692e4d6eaee551a4dff5972afb256a916e3d71395051"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_offline_capabilities.py",
+      "bytes": 9179,
+      "sha256": "a651fe388da004e863e30355c42c05468af9e6a1f6bac632f114ca612fbd182b"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_orchestrator_recovery_quality.py",
+      "bytes": 14642,
+      "sha256": "006d1473d894f3d50260bcccafa5da76d3807fb16e345ec19f9c162671b3e9c4"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_premise_review.py",
+      "bytes": 3651,
+      "sha256": "7f1120419e4eb35508d824c0c13f828287c8f5ba1eb7bbe58b3ef1a4a21ad943"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_question_budget_integration.py",
+      "bytes": 23475,
+      "sha256": "15c0c8bb51282968e09925a4096e10174ef2ea3ee681da0afdfc4c092876d234"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_question_dispatch_budget.py",
+      "bytes": 17148,
+      "sha256": "44f431111a3caa93f215c79b9dc0ccc4746eec6e5bdbeb4ced82739dddf9a5ab"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_readback_paging.py",
+      "bytes": 5391,
+      "sha256": "103993b049d3c61daf2e60bc62383459b01b05b5e23b0b6f92c72cfa9d2f6f32"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_report_delivery_tree.py",
+      "bytes": 45721,
+      "sha256": "2bab2590d2df3f8e96333117cca4eeaf73f375fbb499a75978acd135a0442bc9"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_report_epoch_integration.py",
+      "bytes": 38054,
+      "sha256": "37c7de1164c270b08fe1a067e1cd0b402ca378c92429f228b3f7e1417a3f7c52"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_report_finalization.py",
+      "bytes": 54695,
+      "sha256": "bc17f9a245b8b043052f76415735db3da4e918fd6185623e63f063e2b880c89e"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_report_parallel_audit.py",
+      "bytes": 20571,
+      "sha256": "c2231bec14b1aa5dbcbed7246ed55a8e452cecb56670994109cb55ef4bf4bccc"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_report_plan_rendering.py",
+      "bytes": 9726,
+      "sha256": "fcdcd6b2082c6cef634253782aeb521d3371cb3bb88893791482afef9950b8ba"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_report_planning_replay.py",
+      "bytes": 4112,
+      "sha256": "6d453039b1b9e63b5bf29927539d62bf7f089915fc630b8f65f053779a06736a"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_report_prompt_access.py",
+      "bytes": 4047,
+      "sha256": "7b9836b7f66f525d656c447d483ebb1bd88405ab8e88335544243921a1f914f6"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_report_protocol.py",
+      "bytes": 18304,
+      "sha256": "e8ecf5f8a3c90d6310c3211b946dc66950917a79d52892626cc2798660230238"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_report_quote_alignment.py",
+      "bytes": 5203,
+      "sha256": "dc2dac9412a4d66800f835c64481b572e573fab5abae37de9cff21ead00fff93"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_report_requirements.py",
+      "bytes": 18954,
+      "sha256": "b653c13db322e9fd72639df486bf7f8cf96adb07dc17dfe28ffef910de7ea470"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_report_research_policy.py",
+      "bytes": 2211,
+      "sha256": "f986d6e6aa085c0611ef5b345dc10efc4c3fb8b22c0c5e7dc49310c8de9e26fd"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_report_research_strategy.py",
+      "bytes": 7102,
+      "sha256": "b0d0a40b4e4a18b4c0251c22d8d1d3682301dcbfe2cc789aaadd2525ff9af5a0"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_report_review_contract.py",
+      "bytes": 10305,
+      "sha256": "36c549df38a0ab883d3031e680b63c7324437624062eb13fda8743360e9cf46d"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_report_runtime.py",
+      "bytes": 43780,
+      "sha256": "a4a5f32dd6cb2fe8a0bc13545f0f6a92930cfb837244acb0c90c16dd97d528c4"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_report_worker_evidence.py",
+      "bytes": 8477,
+      "sha256": "b90ed52ee7f08b0fb1025f99359edd3cc8407fdd84b9387971329ac24c4bb2f4"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_result_informed_planning.py",
+      "bytes": 57623,
+      "sha256": "2b4c19a5f22df7d40707c110a4b3fff96282c90aed8dd095658763a6cedcd698"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_root_synthesis_and_wait.py",
+      "bytes": 10753,
+      "sha256": "8dbd0fe4e2e304d4b4671b7c164a6d2c81944631cce76e09e5a615e4f5c9f9a0"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_sandbox_bootstrap.py",
+      "bytes": 12068,
+      "sha256": "352fb30080aef0c5e43a75603cc3757520eb2386162edbf47b832457c12fd5e7"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_science_mcq_strategy_isolation.py",
+      "bytes": 4614,
+      "sha256": "38ce864308d3d41b28fd0a27ee85878b68f315d9aee97812d95b8a7538609c9b"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_source_index.py",
+      "bytes": 5993,
+      "sha256": "b943ec7b6759a96ee1072a56548462f580156712ae6abc900f13bb27e021f197"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_synthesis_failure_safety.py",
+      "bytes": 10711,
+      "sha256": "4c5d1c9b62aecfbffd382640799e256f354325006df267be90c600c69db5347a"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_task_router.py",
+      "bytes": 4893,
+      "sha256": "e6e34199eb595a464870be7a64fbc2c91be2d3f39f0b11b70d8c983b1bf2e4d3"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_tools_native.py",
+      "bytes": 27734,
+      "sha256": "5540accf3bd7253449ba223b0284043d41a7e0b7a0ffacbadb6ac155db960b7c"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_tree_synthesis_failure_safety.py",
+      "bytes": 14561,
+      "sha256": "054af6c7d409a285f1171064aa229f144529a18c9fdd064f3f8df1abbee9106c"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_url_retry_integration.py",
+      "bytes": 21751,
+      "sha256": "bbd85fc33fb21c343d9b6f048a721a9bfb5e15fb91d8f013aa34472d235d8948"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_url_retry_policy.py",
+      "bytes": 9066,
+      "sha256": "d3c5e387afd651995c9631e2c8678894824b50ecf1b2b10c16f83669ffb18225"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_verification_repair.py",
+      "bytes": 9052,
+      "sha256": "d0832829585ed4ee140476bc3cf163de1671b10f628167ba4dfa8924115e3bcf"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_worker_reasoning_history.py",
+      "bytes": 4502,
+      "sha256": "cad408f372ead16119cde6f9c6b8eb7721bd7cb9291661828c73457637125bc6"
+    },
+    {
+      "path": "AgentHarness/tests/workflows/dynamic_htn_informed_research/test_worker_report_readback.py",
+      "bytes": 4566,
+      "sha256": "6061d30a81fa85b9af491dc75723c8866ebd071b8fbb649e70e1157465486417"
+    },
+    {
+      "path": "AgentHarness/uv.lock",
+      "bytes": 615921,
+      "sha256": "cf618f0b3531c5bc98ebde74b9cdea74db84f219c1d0c4f7ec97ed77ff74f1db"
+    },
+    {
+      "path": "AgentHarness/workflows/.source_generation",
+      "bytes": 38,
+      "sha256": "27f360f5a875535d2e2d940f0aaf60b5d927a051f268634f0fc2ea884b6eecde"
+    },
+    {
+      "path": "AgentHarness/workflows/__init__.py",
+      "bytes": 80,
+      "sha256": "95d0d219ac4223e9e7590209ebd33406dd01e409c97f8c3748ebd3fa0c7a93c8"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/README.md",
+      "bytes": 23325,
+      "sha256": "efb6484e765038c76952a5a8ecbfe700aba74361adcd5417c0a8cf53905a7afc"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/__init__.py",
+      "bytes": 988,
+      "sha256": "3ada6c8b1b29ddcb451a82220f0f241cd0a3d8aec4baaadf92ddafd19977c42f"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/adapters.py",
+      "bytes": 43420,
+      "sha256": "81fc718aeb52086370775da604a09c4af9dd30d5152f33cbd3f66029f092c13a"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/agent_def.py",
+      "bytes": 547,
+      "sha256": "2c5b8e44d2725a0c167400e2c8a3ae5ab0f636dcee7090cef73c85650448ad5e"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/diagnostics.py",
+      "bytes": 11405,
+      "sha256": "2a7866e8f01269f428f4fc59dc49e0de83678051a4afe57383c83b5aead5a66a"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/finalize.py",
+      "bytes": 2987,
+      "sha256": "7d5b02edf36eb9fdb1b5b137177c6f7c90a2cb34069d07fa26e656f005894239"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/htn/__init__.py",
+      "bytes": 1754,
+      "sha256": "f8f55dfc7b72e675a476c06af861cf28a7d148602634a3a924d7dab5704e527f"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/htn/dispatch_budget.py",
+      "bytes": 1847,
+      "sha256": "074fd3a0cb13a7459c263470fc300762f58b71c676b13a8ddd54dcdce705cca4"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/htn/epoch.py",
+      "bytes": 35093,
+      "sha256": "decc3cb92b41e6f4d0c73b2cd0f01c6d54dc9e673b3035ffc31cf187c344e65a"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/htn/llm_types.py",
+      "bytes": 1757,
+      "sha256": "ca2d2c977628a9831ba05551b94c5de7216cb6086c67bb60efdeb2692fa73c51"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/htn/orchestrator.py",
+      "bytes": 113275,
+      "sha256": "0080965a155e94f21bf297981e20c3cfcffe0b4d4a0e689d537246cab360ef44"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/htn/planner.py",
+      "bytes": 7094,
+      "sha256": "4d3ffad4733222385ed0db6c9d8f319101e5cdcf4c0e6b5c4b74577ba4daa41d"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/htn/recovery.py",
+      "bytes": 16432,
+      "sha256": "b0bb87253b654aa035577deb9f40564ab9d1f6ebcd45de8157cc25d04d16bb5e"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/htn/strategies.py",
+      "bytes": 61334,
+      "sha256": "42a0470bc7756c7d13fbf9f72192aeb7fe652845f452094ae730cc0edb115d2d"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/htn/task_node.py",
+      "bytes": 3549,
+      "sha256": "66bbce59ae807a534a2e900f5980786ea14e6150bdc3056ce20e3606a3561d4b"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/htn/task_tree.py",
+      "bytes": 22166,
+      "sha256": "f4222053ee02541452c229596098bbe8444201e4fc24a597a7d70d5a681e4f01"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/markup.py",
+      "bytes": 2510,
+      "sha256": "c792d753be19b20d757874b7b9b482cdb402f7d42e85054df5680ac5e4e38bd8"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/nodes/__init__.py",
+      "bytes": 34,
+      "sha256": "d23a2eef3caf5fe60ef6e530734f0a0a36261d20e508798f56b727840a6fe73a"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/nodes/dynamic_solve.py",
+      "bytes": 82060,
+      "sha256": "11414e34f9c74ee7deda39724d622ede5be28a0e6e6d477071636b261b7e66f0"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/profile.py",
+      "bytes": 14622,
+      "sha256": "17882c94e34ccf67ff2f21da534f4b8542abe94c47a781302e2a849c6b2df464"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/profiles/ablations/no_replanning/auto.yaml",
+      "bytes": 268,
+      "sha256": "d0c254cdce54ca144d68a60c6e2493cabdc1d75a9e0d76403611e849a5621394"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/profiles/ablations/no_replanning/report_research.yaml",
+      "bytes": 1438,
+      "sha256": "49212878b8c1a099e1cf22a1f5efd25267c5d48d48a536bac4b2cadc8992fd16"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/profiles/ablations/no_replanning/research.yaml",
+      "bytes": 1484,
+      "sha256": "8cf90bfe1aee5b4fda2cfbd721a438bf09bafc07de825306210409558f6b9874"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/profiles/ablations/no_replanning/science_mcq.yaml",
+      "bytes": 1440,
+      "sha256": "84d5ad7cae0410fb5118665c7dec65d4ca8d5b97ec1be0febb8778a034b54c31"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/profiles/ablations/no_replanning/science_olympiad.yaml",
+      "bytes": 1442,
+      "sha256": "2f46e22c31ec4812c67cf943175d28e5d8a169c52d6da4cda3f5b736609ffc4c"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/profiles/auto.yaml",
+      "bytes": 318,
+      "sha256": "2383017f8b3771e3522db6ebd89af24c00e66da7dd72e8aad33e43e328b7e20a"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/profiles/research.yaml",
+      "bytes": 4286,
+      "sha256": "87484cb99bd677bcb7e0962699f476074832250501067ae5c181ce678a72dbc8"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/profiles/science_olympiad.yaml",
+      "bytes": 1583,
+      "sha256": "6102c2186516a83ab6b3788277ccdec73e3d735606e5459e34df98df5998bc29"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/profiles/report_research.yaml",
+      "bytes": 2017,
+      "sha256": "731270ceee49f3e10d009cf3d210c33a467361aa5f2850b732420b4e2a731ceb"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/profiles/science_mcq.yaml",
+      "bytes": 1432,
+      "sha256": "8a4b637c98c887c8d8b5bd25dddf7f3e8440e382c375ffcce35a1cde65e32af0"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/profiles/router.yaml",
+      "bytes": 357,
+      "sha256": "a1196ef6d0b97235fb1393e6195bdaceef4154e723f2d05377d449884cb09894"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/runtime/__init__.py",
+      "bytes": 52,
+      "sha256": "e6b16c3b4f392be9c0f2986e98488921c1124a88082827c81ad335c12e9432ef"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/runtime/context.py",
+      "bytes": 17537,
+      "sha256": "7ca23a4791e3647eee04dea00d1e0737b19f6e733d49eb83a294b0255f463f55"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/runtime/evidence_memory.py",
+      "bytes": 13117,
+      "sha256": "42d8140ad22ead687690508830615263ee473365c572bbcb24b8459335f02127"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/runtime/llm.py",
+      "bytes": 11566,
+      "sha256": "5ac38c9734cb530d7cc831a843ee27fbea7e86bd7b96046ba0c56943a8219a39"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/runtime/tool_call_recovery.py",
+      "bytes": 4086,
+      "sha256": "7064b3b78f419108dd4f8f30d89548003e4d0ddf047bdf776756dc8061e57aea"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/runtime/worker.py",
+      "bytes": 16833,
+      "sha256": "a669ffd66692a2a0d2d7b56d9bd9550c0f2a015e7d2622594dcc45f0d9629398"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/runtime/worker_budget.py",
+      "bytes": 1539,
+      "sha256": "8b04877dbf03eeb517c7214cbebe7cc257e52186cf24e996da32785f81e54e04"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/source_index.py",
+      "bytes": 15085,
+      "sha256": "79dc77a135f62a40681659ef61d420194037a70cdfb9f1cf3b59b6831cc87472"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/spec.py",
+      "bytes": 1961,
+      "sha256": "cdf9d743d2598650e94ebe82cdd99f7d336902d864e4c9f2476d9d168451a053"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_router.py",
+      "bytes": 14546,
+      "sha256": "915890606f139ccdf8c2745489ac4a030601f9da37dbb2e344e2b054d8e416f8"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/__init__.py",
+      "bytes": 631,
+      "sha256": "7a938eabcba57478dbdb0e42ea6117bdc92e9322b81c9bb2c4da6ec30d8db4b5"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/contracts.py",
+      "bytes": 5855,
+      "sha256": "7331598b0dd492c74934fa008971a698f3752d99a50ed4df1be7e614ca093a71"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/prompt_access.py",
+      "bytes": 2288,
+      "sha256": "d4dda3f2df11d6d2bcfec177158530452a9e79590bef578101c92c73f4840a5a"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/registry.py",
+      "bytes": 2341,
+      "sha256": "3edff7a9844eb5fb25cdfa6771c24396ed64602fe47582b443b84d351f422b59"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/__init__.py",
+      "bytes": 6288,
+      "sha256": "96d329a2868361322b5dbe335c6473a338619909a5616531f584f22afa049366"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/coordination.py",
+      "bytes": 5507,
+      "sha256": "77cfb821ddd46a23d396f62eaeb974546cc2f6f70996858e26fd18fd0428300a"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/delivery.py",
+      "bytes": 16481,
+      "sha256": "c5bda9adfa5d1d18a8be13bf662701bbd931987d3456563eae033d68255edbf2"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/evidence.py",
+      "bytes": 22352,
+      "sha256": "8a8cf8ddf6da0055fda126490e528f4ba8335c5ba1466466a082d9ebc9b8361b"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/finalize.py",
+      "bytes": 44561,
+      "sha256": "4540bf0542db3de8ac472abc68fe81b9bde7cc4ad233aa31d36e22ba56aa9e8a"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/gap_recovery.py",
+      "bytes": 15093,
+      "sha256": "f65fdde1386b723a9471e50799561ba0f25c79a9806208317cf5033d4ddb9de7"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/instruction.py",
+      "bytes": 2892,
+      "sha256": "08c99539c746df00a89481c113c5ebb2bfc2ce3a9eee74c55755eb829a0fc93f"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/plan_audit.py",
+      "bytes": 30565,
+      "sha256": "28d6622b5948f5204d385ba3abb4929fbe500990b339fdfe834340f36e67fcf4"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/plan_rendering.py",
+      "bytes": 8917,
+      "sha256": "7e22d32c8c7068ed572d5a310665b2669c7cc7661128cc662d2668b589d7f7b9"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/planning.py",
+      "bytes": 15954,
+      "sha256": "517dd04f6f40e32e3ae8b35d7ff0bdfec6d97e922659c018bf68a5c013ed0d6d"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/policy.py",
+      "bytes": 5119,
+      "sha256": "44b9baf770f85996d40f35c35f28675088f35d4b8d6377d1cb2e462203c0821d"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/premise_review.py",
+      "bytes": 9016,
+      "sha256": "d141b66647d557b98cfa8d4bee889090477cb757eeedc2af2f836ee79f461311"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/prompt_access.py",
+      "bytes": 1971,
+      "sha256": "9efcbd58ba810b4a853b285f951f8c845769e579e4cc4010004febff2205710b"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/protocol.py",
+      "bytes": 12645,
+      "sha256": "dcc0e7a9f1311f697b9dfa896c84389950e4ad81e6d64c571512429599a5b8dd"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/quote_alignment.py",
+      "bytes": 6445,
+      "sha256": "0df3e5c0bf4f67b36c8ccc3398904117794c56bf88014aba9bd57cfa1b9d1715"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/recovery.py",
+      "bytes": 3963,
+      "sha256": "0768fbd0da48803aa43e4d8504e5d026c56620887bb904fce1701bdacb77a093"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/requirements.py",
+      "bytes": 19835,
+      "sha256": "c97b2b8c8cce556e91aa53497acc1174e0155abcbccbff0ad9bdff436fb220d6"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/review.py",
+      "bytes": 9563,
+      "sha256": "ef45a6cc75782146d424662d88bd8ad2c251ca7115738cc6d85d66f1ae581dfd"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/runtime.py",
+      "bytes": 16912,
+      "sha256": "6a78c3f6dc2bb8a39c230d45a4d7d4359b6118aab21f3bd0ead727eff06fe9ea"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/synthesis.py",
+      "bytes": 10397,
+      "sha256": "2ec1d38b7b6b435fc6e5058fd5a57b15aaef1692c1ea1ade86a990289e4a2895"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/topology.py",
+      "bytes": 10145,
+      "sha256": "5534dd5a08e06612868a86d8ab813aacd23be7c8b3cff2bddcd88f953e8cbfb9"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/verification_repair.py",
+      "bytes": 9607,
+      "sha256": "014a4eaa399812ddf6178532f8e64711d79650fbec96063a68f6048199d5620b"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/report_research/workers.py",
+      "bytes": 15847,
+      "sha256": "19b416dcbe9abb1d5e899022d733793879787c6db158a7046c9f23702c0a273c"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/research/__init__.py",
+      "bytes": 5655,
+      "sha256": "e9eea6b8142e255499bee6e0b4b2eb348cdf1124b0ab54d788b4b398f7c03024"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/research/coordination.py",
+      "bytes": 25934,
+      "sha256": "e3e8872650b4cb774b9f2c262528da92a9929dd941e8531efc70e2334d3f104c"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/research/instruction.py",
+      "bytes": 1273,
+      "sha256": "58548900056defd5b38fe8e3946060cec6cc9cd0072350e3eb2f369442be6ec2"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/research/planning.py",
+      "bytes": 31090,
+      "sha256": "af10e0feac9613e24056550c935c06c84a4d132be896d04fe72746f68b0770b3"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/research/recovery.py",
+      "bytes": 8121,
+      "sha256": "4f61de2b24171bce2784f6921dd3894c3e89983486b377a5074fa07d60995239"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/research/synthesis.py",
+      "bytes": 38784,
+      "sha256": "5754917943caab08a71ac4f67a1a7a574f85146218787a9844d825d1a5ce5453"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/research/workers.py",
+      "bytes": 15164,
+      "sha256": "882ac929abf6f3be605aef84c519fc65865ba9e909db473955803c7e0547c781"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/science_mcq/__init__.py",
+      "bytes": 7435,
+      "sha256": "c76e6c750cf1db6785d25df6ae64f4a888f5990f534a0a29d1a661fdb6b4213b"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/science_mcq/coordination.py",
+      "bytes": 10005,
+      "sha256": "2ebc08c87e99cea30f085b9b9a52591716f1f0238ecdd649fc6d9aeb99ca2559"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/science_mcq/instruction.py",
+      "bytes": 7302,
+      "sha256": "e0f734f3897289de197608469827ea3f7321bb474f4c7718096792a604dc017f"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/science_mcq/planning.py",
+      "bytes": 5837,
+      "sha256": "e870622a405a290abf83892d8dd18d9b23fa4a6e438ab137cc33ffef4e27e70d"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/science_mcq/recovery.py",
+      "bytes": 3166,
+      "sha256": "de31c84041a1f31107f335ac2366bd842586073bc882cbb8eced9b60e1e56940"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/science_mcq/synthesis.py",
+      "bytes": 13736,
+      "sha256": "ffd66d7ccfcfd9d727969932c8b616217e0a7d007e91a14a7351887874058951"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/science_mcq/workers.py",
+      "bytes": 8594,
+      "sha256": "11af143d9fbb703b63d8ef9ced2b3e460c534e3559243057f25a8eba32d89ef0"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/science_olympiad/__init__.py",
+      "bytes": 7098,
+      "sha256": "8618db074b9829ed006cd2dcc60c0902ccbfd13ff950792a645cb9f9e3d6817b"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/science_olympiad/coordination.py",
+      "bytes": 12857,
+      "sha256": "b8c2de8a8149f5d0f908c12d2ec258418f1f238df30dc62e0622023e5a257009"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/science_olympiad/instruction.py",
+      "bytes": 5470,
+      "sha256": "eeb1a6075c12f402b5238bf9d32c4219a2297cd1a62fce907fb50712aca477c2"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/science_olympiad/planning.py",
+      "bytes": 11519,
+      "sha256": "6327a0b71449b63f5e722df013ac3711990a56b270de78a86878f0c1697d6b14"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/science_olympiad/recovery.py",
+      "bytes": 2628,
+      "sha256": "c656fbdf3cec064bf603585057ef6c663b9bffd985ecb23b7edab92fd8850661"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/science_olympiad/synthesis.py",
+      "bytes": 15326,
+      "sha256": "8a2fd33d855689677603250b88d86e224b82380be6de4fd2fc024e4369a6e689"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/task_strategies/science_olympiad/workers.py",
+      "bytes": 6401,
+      "sha256": "87c679e64335a643378f0d51d6add004163485762d59b478d03768f18d3759b5"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/terminal_turn.py",
+      "bytes": 1809,
+      "sha256": "bb35ebf06d31cc014c26d0acc7e5cd795f868ca2fcca3aa795af3aa0975e4df2"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/tools/README.md",
+      "bytes": 7174,
+      "sha256": "11fdb447cc955a44cdcd4b24f6ddebc13dabea650a56c3274d4542c3d0f3db2d"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/tools/__init__.py",
+      "bytes": 423,
+      "sha256": "8a3c11413438dbaba3a7be5f90591d3441a995eb1efa3a9ac224a82e0a243067"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/tools/_pure.py",
+      "bytes": 14120,
+      "sha256": "b2627817b8a3c2271c4d88a5fdad426a2d08eb9beb5dbea56d36c65a765b7fe0"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/tools/_summary_prompts.py",
+      "bytes": 3956,
+      "sha256": "940eba7e0409b45728d3aab4b3c06acd1129618a46d61365c36e556716659e2a"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/tools/academic.py",
+      "bytes": 3695,
+      "sha256": "980a481e8415d397577bf9502f33fbafbeac181c925e40aaa465b07f30f0ee01"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/tools/html_extract.py",
+      "bytes": 7810,
+      "sha256": "7a37b518fbc134c6f979f63ac713eb8a68e48c65ea148396ffe1a69107fbbf3d"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/tools/readback.py",
+      "bytes": 3686,
+      "sha256": "8e62d13185c8b6444362b9c5d894e7e17143fd602d4c568d6c1a37f965e895cc"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/tools/runtime.py",
+      "bytes": 40215,
+      "sha256": "114a59b7bb0de48c5e8790df3ed6deae7ed19e63acadd600a3836f9fdd07d89e"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/tools/sandbox.py",
+      "bytes": 4532,
+      "sha256": "1b140c9498dd9ae2a1afdfd3175ce7fe77618145828349c2ce9bc2be1ea659ed"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/tools/sandbox_bootstrap.py",
+      "bytes": 4949,
+      "sha256": "646a0bf4ab2fe2645d670230061944573615bf731a83cd86da6517579a17a7ef"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/tools/schemas.json",
+      "bytes": 9508,
+      "sha256": "6894bd901bfbf2e9cf3145552e59818cbf42313ffeaa78cff7fcbee3cba641bd"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/tools/scrape_cache.py",
+      "bytes": 6002,
+      "sha256": "0f512f45b961da8b7923d72ae765e45c2d02293c7da844668df06097f75b00ac"
+    },
+    {
+      "path": "AgentHarness/workflows/dynamic_htn_informed_research/tools/summary.py",
+      "bytes": 7813,
+      "sha256": "398bc84e4aa352fc2ba8d3a280ba540f878e880b37e4bd34fd1a4906c0547d62"
+    },
+    {
+      "path": "AgentHarness/workflows/react_base/__init__.py",
+      "bytes": 1193,
+      "sha256": "37059965665b41abea83a59ab3e01e5e99ddb6ca2f61ce1a4bed6b1818b062a5"
+    },
+    {
+      "path": "AgentHarness/workflows/react_base/compactors.py",
+      "bytes": 2810,
+      "sha256": "acfcf91fe0b6495c041cf451b1a8afc9f9d0603b1d621a693e97263832ecf864"
+    },
+    {
+      "path": "AgentHarness/workflows/react_base/nodes/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AgentHarness/workflows/react_base/nodes/main_agent.py",
+      "bytes": 23031,
+      "sha256": "e13da8ca97c9a1427121e0f790b417c5434940c7ad26dea39ae71b1414abae82"
+    },
+    {
+      "path": "AgentHarness/workflows/react_base/observers/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "AgentHarness/workflows/react_base/observers/console.py",
+      "bytes": 3290,
+      "sha256": "34e279e2ed6d6344b4627b63ac7fd971e2ca6735a63b7d25a07ed6d8e06891a6"
+    },
+    {
+      "path": "AgentHarness/workflows/react_base/observers/duplicate_query_rollback.py",
+      "bytes": 5200,
+      "sha256": "10f645c4490095c90cbb0bc327e7ffa6a0425c5c9a0baa9bfb875afe9c238bf3"
+    },
+    {
+      "path": "AgentHarness/workflows/react_base/observers/empty_search_rollback.py",
+      "bytes": 4320,
+      "sha256": "205eb30d2ba25abceab9399c29e2b75ce9132c6a5e231136eda049ec71d34de4"
+    },
+    {
+      "path": "AgentHarness/workflows/react_base/observers/refusal_rollback.py",
+      "bytes": 3481,
+      "sha256": "200cb4341b704fcd113fef55a02a654284d66fa85116eda12bfe867e92328eaf"
+    },
+    {
+      "path": "AgentHarness/workflows/react_base/observers/tool_call_normalizer.py",
+      "bytes": 5398,
+      "sha256": "78ef8b950844638a53ce4f76f28ef2605e14ac7c6abd3030b95ffc95d656eb13"
+    },
+    {
+      "path": "AgentHarness/workflows/react_base/observers/trajectory.py",
+      "bytes": 1829,
+      "sha256": "2f5cd5bcdc4215f2d603e14b57a41c02a5ed3c531316b6cbb95e3d5356280020"
+    },
+    {
+      "path": "AgentHarness/workflows/react_base/profile.py",
+      "bytes": 9748,
+      "sha256": "7f9e93638e7f31e6675d562c145f75c75cf94c38963cf39f209d1afa65ab0a52"
+    },
+    {
+      "path": "AgentHarness/workflows/react_base/profiles/default.yaml",
+      "bytes": 541,
+      "sha256": "3a8e7a52eb7a1730717d7a479726edd3d201151a458a4cdb1df416ade3013672"
+    },
+    {
+      "path": "AgentHarness/workflows/react_base/profiles/keep5.yaml",
+      "bytes": 578,
+      "sha256": "5b2741f86a576ad53901c0b2a1f0a8142dba05e6d5d590aeee269e5d80a51da3"
+    },
+    {
+      "path": "AgentHarness/workflows/react_base/prompts.py",
+      "bytes": 2553,
+      "sha256": "c19e256b0cdc347a26d1d0c2d9756c6cf61e6e3663e06fa9dca5dd2e896f4a52"
+    },
+    {
+      "path": "AgentHarness/workflows/react_base/spec.py",
+      "bytes": 1512,
+      "sha256": "4923f1fb24c43cfbc73d6c013645203467fe8e09df5184a3acf88a862ec29fc2"
+    }
+  ],
+  "excluded_tracked_files": [
+    "workflows/dynamic_htn_informed_research/bench/bc200.md",
+    "workflows/dynamic_htn_informed_research/bench/bc200_merge_audit_20260918.md",
+    "workflows/dynamic_htn_informed_research/bench/bc200_merge_regression_20260917.md",
+    "workflows/dynamic_htn_informed_research/bench/bc200_no_replanning_ablation_20260930.md",
+    "workflows/dynamic_htn_informed_research/bench/bc200_single_agent_per_leaf_ablation_20261001.md",
+    "workflows/dynamic_htn_informed_research/bench/browsecomp_full_comparison_20261011.csv",
+    "workflows/dynamic_htn_informed_research/bench/browsecomp_full_comparison_20261011.json",
+    "workflows/dynamic_htn_informed_research/bench/browsecomp_full_comparison_20261011.md",
+    "workflows/dynamic_htn_informed_research/bench/fso86.md",
+    "workflows/dynamic_htn_informed_research/bench/fso86_merge_regression_20260916.md",
+    "workflows/dynamic_htn_informed_research/bench/fso86_offline_20260922.md",
+    "workflows/dynamic_htn_informed_research/bench/fso86_offline_20260922/answers.md",
+    "workflows/dynamic_htn_informed_research/bench/fso86_offline_20260922/effective_configs.json",
+    "workflows/dynamic_htn_informed_research/bench/fso86_offline_20260922/input_manifest.json",
+    "workflows/dynamic_htn_informed_research/bench/fso86_offline_20260922/question_records.csv",
+    "workflows/dynamic_htn_informed_research/bench/fso86_offline_20260922/question_records.jsonl",
+    "workflows/dynamic_htn_informed_research/bench/fso86_offline_20260922/review_adjustments.json",
+    "workflows/dynamic_htn_informed_research/bench/fso86_offline_20260922/summary.json",
+    "workflows/dynamic_htn_informed_research/bench/fsr_agent_team_comparison_20260923.csv",
+    "workflows/dynamic_htn_informed_research/bench/fsr_agent_team_comparison_20260923.md",
+    "workflows/dynamic_htn_informed_research/bench/fsr_low_score_analysis.md",
+    "workflows/dynamic_htn_informed_research/bench/routing_fso86_bc200_20260914.md",
+    "workflows/dynamic_htn_informed_research/bench/superchem10_reasoning_pilot.md",
+    "workflows/dynamic_htn_informed_research/bench/superchem256_offline_20261005.md",
+    "workflows/dynamic_htn_informed_research/bench/superchem256_reasoning.md"
+  ]
+}

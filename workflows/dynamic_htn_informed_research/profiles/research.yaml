@@ -1,0 +1,109 @@
+# Dynamic HTN / BrowseComp-200 collaboration profile.
+#
+# Keep secrets and endpoints in the repository-root .env.  This file owns model
+# names, decode settings, workflow budgets, and reproducible evaluation defaults.
+
+behavior:
+  strategy: research
+
+llm:
+  provider: openrouter
+  model: deepseek-v4.1-flash
+  temperature: 1.0
+  top_p: 0.95
+  max_tokens: 65536
+  # Pathological high-effort control calls occasionally reason for 20–30
+  # minutes. Preserve high as the default, but after ten minutes cancel the
+  # local request and retry the same prompt/tools fresh at low effort.
+  high_effort_timeout_s: 600
+  extra_body:
+    reasoning_effort: high
+    # Keep every DeepSeek request on DeepSeek's own backend. Do not silently
+    # fall back to another provider, because that makes latency attribution
+    # and full-run wall-clock behavior non-reproducible.
+    provider:
+      only:
+        - deepseek
+      allow_fallbacks: false
+
+# DeepSeek V4.1 Flash's updated default reasoning is much longer than the prior
+# model version. Controlled replay keeps the highest-frequency extraction
+# roles cheap (researcher/verifier workers, instruction generation, and the
+# web-fetch Summary LLM), while planning, coordination, synthesis, and recovery
+# stay high. Planner has a bounded protocol retry for incomplete tool calls.
+# Summary LLM uses a thinking-disabled retry only for an empty or
+# length-truncated low-effort response.
+reasoning_effort:
+  worker: low
+  coordinator: high
+  instruction_generation: low
+  leaf_synthesis: high
+  tree_synthesis: high
+  planner:
+    epoch_0: high
+    rebuild: high
+    # Generation and validation are asymmetric. Audit each proposed child
+    # independently at low effort; only explicit fidelity defects trigger a
+    # topology-preserving high-effort local revision.
+    audit: low
+    revision: high
+  recovery: high
+
+planner:
+  # Only completed HTN node summaries are exposed to result-informed planning;
+  # full sub-agent reports and ref files are never loaded into this context.
+  max_precursor_chars: 24000
+  max_single_summary_chars: 6000
+
+agent:
+  max_depth: 2
+  max_children: 4
+  max_rounds: 12
+  max_agents_per_round: 3
+  # AgentHarness extension: shared across all leaves, rebuilds and report gaps.
+  # 0 disables the cumulative cap for comparison with the original strategy.
+  max_total_workers: 0
+  worker_token_budget: 0  # Disable the cumulative token cap.
+  max_iterations: 24
+  # 70 still permits deep BrowseComp research, while reserving the final turn
+  # for an explicit submit_report inside the two-hour per-leaf wall clock.
+  subagent_max_turns: 70
+  progressive_fan_in: true
+  fan_in_grace_s: 30
+  leaf_timeout_s: 7200
+  question_timeout_s: 28800
+  # Stop tree execution before the hard question deadline so timeout/rebuild
+  # cases still have time for root-bound audit, forced selection, and answer
+  # serialization. The final marker formatter retains its own smaller reserve.
+  finalization_reserve_s: 1800
+  # A leaf timeout terminates the current planning epoch. One fresh tree may
+  # start from a positive-fact-only evidence capsule while sharing the original
+  # question wall clock. A second timeout uses the normal root finalizer over
+  # raw evidence instead of letting the recovery router author an answer.
+  max_rebuilds: 1
+  recovery_timeout_s: 300
+  # Each of the two terminal forced-answer stages first tries high for ten
+  # minutes, then retries fresh at low. Low is bounded only by the question
+  # wall clock, not by another stage-local timeout.
+  forced_finalization_high_timeout_s: 600
+  min_rebuild_remaining_s: 1800
+  recovery_max_input_chars: 500000
+  recovery_capsule_chars: 24000
+  # Mechanical answer-marker serialization only. Semantic fallback reuses the
+  # root-bound audit/select path; it never promotes a child answer label.
+  answer_format_timeout_s: 120
+
+web:
+  # Agent Team fetches directly.  The old shared network-filesystem SQLite
+  # cache was corrupt and caused lock/corruption warning storms.
+  content_cache_enabled: false
+summary_llm:
+  allow_environment_fallback: false
+  provider: openrouter
+  model: deepseek-v4.1-flash
+  reasoning_effort: low
+  provider_routing:
+    only:
+      - deepseek
+    allow_fallbacks: false
+  retry_empty_or_length_with_thinking_disabled: true

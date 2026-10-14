@@ -1,0 +1,11 @@
+benchmark: frontier_science_olympiad
+dataset:
+  subset: ../datasets/FrontierScience-Olympiad/standardized_data.jsonl
+judge:
+  provider: openrouter
+  model: gpt-5.5
+  reasoning_effort: high
+web_policy:
+  network_enabled: false
+  blocked_domains: []
+  blocked_terms: []

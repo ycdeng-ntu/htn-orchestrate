@@ -1,0 +1,70 @@
+# FrontierScience-Olympiad profile using the dedicated science strategy.
+
+behavior:
+  strategy: science_olympiad
+
+llm:
+  provider: openrouter
+  model: deepseek-v4.1-flash
+  temperature: 1.0
+  top_p: 0.95
+  max_tokens: 65536
+  high_effort_timeout_s: 600
+  extra_body:
+    reasoning_effort: high
+    provider:
+      only:
+        - deepseek
+      allow_fallbacks: false
+
+reasoning_effort:
+  worker: low
+  coordinator: high
+  instruction_generation: low
+  leaf_synthesis: high
+  tree_synthesis: high
+  planner:
+    epoch_0: high
+    rebuild: high
+    audit: high
+    revision: high
+  recovery: high
+
+planner:
+  max_precursor_chars: 24000
+  max_single_summary_chars: 6000
+
+agent:
+  # HTN depth is zero-based: 1 permits root -> terminal portfolio children
+  # while preventing a reconciliation child from opening another portfolio.
+  max_depth: 1
+  max_children: 4
+  max_rounds: 12
+  max_agents_per_round: 3
+  max_iterations: 24
+  subagent_max_turns: 70
+  progressive_fan_in: true
+  fan_in_grace_s: 30
+  leaf_timeout_s: 4800
+  question_timeout_s: 14400
+  finalization_reserve_s: 900
+  max_rebuilds: 1
+  recovery_timeout_s: 300
+  forced_finalization_high_timeout_s: 600
+  min_rebuild_remaining_s: 1800
+  recovery_max_input_chars: 500000
+  recovery_capsule_chars: 24000
+  answer_format_timeout_s: 120
+
+web:
+  content_cache_enabled: false
+summary_llm:
+  allow_environment_fallback: false
+  provider: openrouter
+  model: deepseek-v4.1-flash
+  reasoning_effort: low
+  provider_routing:
+    only:
+      - deepseek
+    allow_fallbacks: false
+  retry_empty_or_length_with_thinking_disabled: true

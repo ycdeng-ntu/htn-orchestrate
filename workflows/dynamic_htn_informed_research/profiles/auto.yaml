@@ -1,0 +1,8 @@
+# Meta profile: router chooses the execution profile for each question.
+router:
+  profile: ./router.yaml
+routes:
+  research: ./research.yaml
+  science_olympiad: ./science_olympiad.yaml
+  science_mcq: ./science_mcq.yaml
+  report_research: ./report_research.yaml

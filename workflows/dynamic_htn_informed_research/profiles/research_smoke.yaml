@@ -1,0 +1,51 @@
+# Minimal smoke-test profile with small budgets and low reasoning effort.
+
+behavior:
+  strategy: research
+
+llm:
+  provider: openrouter
+  model: deepseek-v4.1-flash
+  temperature: 1.0
+  top_p: 0.95
+  max_tokens: 16384
+  extra_body:
+    reasoning_effort: low
+
+reasoning_effort:
+  worker: low
+  coordinator: low
+  instruction_generation: low
+  leaf_synthesis: low
+  tree_synthesis: low
+  planner:
+    epoch_0: low
+    rebuild: low
+    audit: low
+    revision: low
+  recovery: low
+
+agent:
+  max_depth: 1
+  max_children: 2
+  max_rounds: 4
+  max_agents_per_round: 2
+  max_total_workers: 0
+  worker_token_budget: 0
+  max_iterations: 8
+  subagent_max_turns: 10
+  progressive_fan_in: true
+  fan_in_grace_s: 10
+  leaf_timeout_s: 300
+  question_timeout_s: 600
+  finalization_reserve_s: 60
+  max_rebuilds: 0
+  recovery_timeout_s: 60
+  forced_finalization_high_timeout_s: 60
+  min_rebuild_remaining_s: 120
+  recovery_max_input_chars: 100000
+  recovery_capsule_chars: 8000
+  answer_format_timeout_s: 30
+
+web:
+  content_cache_enabled: false

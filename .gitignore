@@ -1,0 +1,61 @@
+# Secrets / env
+.env
+.env.*
+!.env.example
+config.yaml
+
+# Tooling caches
+.venv/
+.uv-cache/
+.ruff_cache/
+.pytest_cache/
+__pycache__/
+*.py[codz]
+*.tsbuildinfo
+
+# OS
+.DS_Store
+
+# Frontend
+node_modules/
+frontend/.next/
+frontend/tmp/
+
+# Python build / packaging
+*.egg-info/
+
+# SQLite scratch
+*.db
+*.db-shm
+*.db-wal
+
+# Jupyter
+**/.ipynb_checkpoints/
+
+# Eval / run outputs
+benchmarks/results/
+benchmarks/tasks-generated/
+experiments/
+results/
+logs/
+tmp/
+temp/
+data/
+benchmarks/datasets
+
+# Local reference checkouts, audits, and retained runtime copies
+/references/
+/audits/
+/.runtime_snapshots/
+/.worktrees/
+
+# Generated benchmark reports/data (keep bench scripts and Markdown notes)
+/workflows/**/bench/**/*.json
+/workflows/**/bench/**/*.jsonl
+/workflows/**/bench/**/*.csv
+/docs/migration/*.json
+
+# Local gateway profiles containing embedded credentials
+/workflows/dynamic_htn_informed_research_v1_1/profiles/bc200_deepseek_v4_1_flash_llmhub.yaml
+/workflows/dynamic_htn_informed_research_v1_1/profiles/bc200_deepseek_v4_flash_llmhub.yaml
+/workflows/dynamic_htn_informed_research_v1_1/profiles/fsr_deepseek_v4_flash_llmhub.yaml

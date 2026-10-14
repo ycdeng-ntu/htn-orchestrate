@@ -1,0 +1,11 @@
+benchmark: prl_bench
+dataset:
+  subset: ../datasets/PRL-Bench/standardized_data.jsonl
+judge:
+  provider: openrouter
+  model: gpt-5.5
+  reasoning_effort: medium
+web_policy:
+  network_enabled: false
+  blocked_domains: []
+  blocked_terms: []

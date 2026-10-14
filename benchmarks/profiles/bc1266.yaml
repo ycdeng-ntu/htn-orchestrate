@@ -1,0 +1,48 @@
+# Keep browsecomp_200 to retain the semantic judge used by the runs.
+# Dataset paths are relative to this YAML; dataset files are not copied here.
+benchmark: browsecomp_200
+dataset:
+  subset: ../datasets/BrowseComp/standardized_data.jsonl
+judge:
+  provider: openrouter
+  model: gpt-5.5
+  reasoning_effort: medium
+  variant: semantic
+web_policy:
+  blocked_domains:
+  - huggingface.co/datasets/
+  - openreview.net/pdf?id=BU3bG9JhVf
+  - www.scribd.com/document/1070411512/2608-05102v1
+  - www.researchgate.net/publication/393378740_WebSailor_Navigating_Super-human_Reasoning_for_Web_Agent
+  - www.studocu.com/in/document/vaageswari-college-of-engineering/computer-science-and-engineering/websailor-advanced-reasoning-methodology-for-web-agents-2507/133815400
+  - proceedings.iclr.cc/paper_files/paper/2026/file/6818dcc65fdf3cbd4b05770fb957803e-Paper-Conference.pdf
+  - openreview.net/pdf/52b2808df0890898f4481a60640997d1c9786f06.pdf
+  - openreview.net/attachment?id=AvxJqQW1X5&name=pdf
+  - arxiv.org/abs/2504.12516
+  - arxiv.org/html/2504.12516
+  - arxiv.org/pdf/2504.12516
+  - arxiv.org/abs/2507.02592
+  - arxiv.org/html/2507.02592
+  - arxiv.org/pdf/2507.02592
+  - arxiv.org/abs/2510.18939
+  - arxiv.org/html/2510.18939
+  - arxiv.org/pdf/2510.18939
+  - arxiv.org/abs/2606.14885
+  - arxiv.org/html/2606.14885
+  - arxiv.org/pdf/2606.14885
+  - arxiv.org/abs/2608.05102
+  - arxiv.org/html/2608.05102
+  - arxiv.org/pdf/2608.05102
+  blocked_terms:
+  - huggingface
+  - hugging face
+  - evaluation dataset
+  - correct_answer
+  - extracted_final_answer
+  - observation-masking-eval-logs
+  - browsecomp
+  - browse-comp
+  - arxiv.org/abs/2601.22984
+  - arxiv.org/html/2601.22984
+  - paperswithcode.com
+  network_enabled: true

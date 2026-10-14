@@ -1,0 +1,11 @@
+benchmark: superchem_text
+dataset:
+  subset: ../datasets/SUPERChem/standardized_data.jsonl
+judge:
+  provider: judge
+  model: gpt-5.5
+  reasoning_effort: null
+web_policy:
+  blocked_domains: []
+  blocked_terms: []
+  network_enabled: false

@@ -1,0 +1,16 @@
+HTN-Orchestrate code snapshot
+Commit: b08b0b256bccdf2ad342e325da231ef089e8fc8a
+
+Includes committed source code, tests, dependency lockfile, documentation,
+configuration templates, and benchmark runner code.
+
+Excludes Git history, virtual environments, caches, credentials, datasets,
+experiment outputs, audit traces, benchmark reports, untracked v2 copy,
+and the separate legacy MiroHarness project.
+
+Install dependencies using pyproject.toml / uv.lock and configure credentials
+from .env.example on the destination machine. Benchmark datasets must be
+provided separately.
+
+Source files were exported from the commit, not modified in the working tree.
+PACKAGE_MANIFEST.json records SHA-256 hashes of included source files.

@@ -1,0 +1,204 @@
+{
+  "web_search": {
+    "type": "function",
+    "function": {
+      "name": "web_search",
+      "description": "Search the web for information about a topic.\n\n``q`` accepts a single string or a list of strings. List queries\ndispatch in parallel and merge into one result, deduplicated by URL —\none turn can cover multiple angles without burning extra steps.\n\nArgs:\n    q: A query string, or a list of strings for parallel dispatch.\n    num_results: Organic results per query (default 10, max 100).\n    gl: Country/region code (default \"us\"). Examples: \"cn\", \"uk\", \"de\".\n    hl: Language code (default \"en\"). Examples: \"zh\", \"es\", \"fr\".\n    tbs: Time filter. Examples: \"qdr:h\" / \"qdr:d\" / \"qdr:w\" / \"qdr:m\" / \"qdr:y\".\n\nReturns:\n    Formatted results with answers, knowledge graph, and organic links.\n    Multi-query calls return one block per query separated by ``---``.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "q": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "num_results": {
+            "type": "integer",
+            "default": 10
+          },
+          "gl": {
+            "type": "string",
+            "default": "us"
+          },
+          "hl": {
+            "type": "string",
+            "default": "en"
+          },
+          "tbs": {
+            "type": "string",
+            "default": ""
+          }
+        },
+        "required": [
+          "q"
+        ]
+      }
+    }
+  },
+  "web_fetch": {
+    "type": "function",
+    "function": {
+      "name": "web_fetch",
+      "description": "Scrape and extract content from one or more web pages.\n\nAutomatic backend selection based on URL domain: PMC / PubMed / bioRxiv /\nmedRxiv URLs go to the corresponding OA API; known paywall domains are\nrouted via Unpaywall; everything else goes through Jina Reader. Retry,\nnegative cache, and arXiv PDF→HTML redirect are applied automatically.\n\nA non-empty ``info_to_extract`` routes the raw content through a cheap\nsummary LLM that extracts only the information requested. With it\nomitted the raw extracted text is returned (subject to overflow trim).\n\nArgs:\n    url: A URL string, or a list of URLs for parallel fetch.\n    info_to_extract: Optional focus for the summary LLM. A single\n        string applies to every URL; a list pairs with ``url`` 1:1.\n\nReturns:\n    For a single URL, the extracted content directly. For a list, a\n    numbered block per URL: ``[i] URL: …\\n    Info: …``.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ]
+          },
+          "info_to_extract": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ],
+            "default": ""
+          }
+        },
+        "required": [
+          "url"
+        ]
+      }
+    }
+  },
+  "scholar_search": {
+    "type": "function",
+    "function": {
+      "name": "scholar_search",
+      "description": "Search Google Scholar for academic papers, preprints, and citations.\n\nUse this for scientific/technical claims, benchmark papers, method\nlookups, or when citation counts matter for credibility. Results\nare sorted by citation count (most-cited first).\n\nArgs:\n    query: The search query string.\n    num_results: Number of results to return (default 10, max 20).\n    gl: Country/region code (default \"us\").\n    hl: Language code (default \"en\").\n\nReturns:\n    Markdown-formatted list of papers with title, authors/year,\n    citation count, snippet, landing-page URL, and PDF URL where\n    available.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string"
+          },
+          "num_results": {
+            "type": "integer",
+            "default": 10
+          },
+          "gl": {
+            "type": "string",
+            "default": "us"
+          },
+          "hl": {
+            "type": "string",
+            "default": "en"
+          }
+        },
+        "required": [
+          "query"
+        ]
+      }
+    }
+  },
+  "run_python_code": {
+    "type": "function",
+    "function": {
+      "name": "run_python_code",
+      "description": "Execute Python code in an isolated sandbox environment.\n\nPre-installed packages: numpy, pandas, scipy, sympy, matplotlib,\nnetworkx, requests, beautifulsoup4.\n\nArgs:\n    code: Python source code to execute.\n    timeout: Maximum execution time in seconds (default 60).\n\nReturns:\n    stdout + stderr from the execution, or an error message.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "timeout": {
+            "type": "integer",
+            "default": 60
+          }
+        },
+        "required": [
+          "code"
+        ]
+      }
+    }
+  },
+  "read_file": {
+    "type": "function",
+    "function": {
+      "name": "read_file",
+      "description": "Read complete archived research output or a file from configured allowed local directories or the E2B sandbox. Archived tool-result JSON files in the worker artifact directory expose their original content.\n\nFor short files, returns the text unchanged. Long files return a page with total, start, end and next_start_char metadata. Character positions count decoded Unicode characters, not bytes; start is zero-based and end is exclusive. Continue with start_char=next_start_char until it is null. max_chars limits the text payload to at most 15000 characters, excluding the small metadata header.\n\nLine mode: start_line/end_line are optional one-based inclusive line bounds (0 means beginning/end). If a line range exceeds max_chars, the page also gives line_range_end_char, the exclusive absolute character position at which the requested line range ends. To continue, omit line bounds, use start_char, and limit max_chars to min(15000, line_range_end_char-start_char) when staying within that range.\n\nCharacter mode: start_char cannot be combined with nonzero start_line or end_line. An offset equal to total returns an empty final page; offsets greater than total are invalid. Explicit character reads always include pagination metadata.\n\nUse only paths within configured local read roots or worker artifacts; absolute sandbox paths are also supported. Returns text, or a tool error for invalid arguments or inaccessible files.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "start_line": {
+            "type": "integer",
+            "default": 0,
+            "minimum": 0,
+            "description": "Optional one-based inclusive first line; 0 starts at the beginning. Do not combine nonzero line bounds with start_char."
+          },
+          "end_line": {
+            "type": "integer",
+            "default": 0,
+            "minimum": 0,
+            "description": "Optional one-based inclusive last line; 0 reads to the end. Must not precede start_line when both are nonzero."
+          },
+          "start_char": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Optional zero-based offset into the complete decoded content, in Unicode characters. Resume from next_start_char without nonzero line bounds."
+          },
+          "max_chars": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 15000,
+            "default": 15000,
+            "description": "Maximum content characters per page (metadata is additional). For continuation within a prior line range, do not exceed line_range_end_char-start_char."
+          }
+        },
+        "required": [
+          "path"
+        ]
+      }
+    }
+  },
+  "submit_report": {
+    "type": "function",
+    "function": {
+      "name": "submit_report",
+      "description": "Submit your final research report and end this task.\n\nCall this **once** when you have gathered enough evidence and are ready\nto return to the main agent. The solver loop terminates after this turn.\n\nArgs:\n    content: The complete report in the mandatory format:\n        ``Scope: ...\\nFinding: ...\\nEvidence:\\n  - ...\\nConfidence: ...``.\n        Include exact values, source URLs, and code results — not just\n        conclusions.\n    confidence: Self-assessed confidence in [0, 1] that your findings\n        are correct and well-sourced. Default 0.7.\n\nReturns:\n    Short acknowledgement. The report body is surfaced to the main\n    agent via ``<report agent=\"NAME\">...</report>``.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "number",
+            "default": 0.7
+          }
+        },
+        "required": [
+          "content"
+        ]
+      }
+    }
+  }
+}

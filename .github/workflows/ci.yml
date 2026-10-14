@@ -1,0 +1,32 @@
+name: CI
+on:
+  push:
+    branches: [main, "release/*"]
+  pull_request:
+    branches: [main, "release/*"]
+
+jobs:
+  lint-and-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v4
+        with:
+          python-version: "3.12"
+      - run: uv sync --extra dev
+      - name: Ruff lint
+        run: uv run ruff check agent_harness/ benchmarks/ workflows/ plugins/
+      - name: Import smoke
+        run: |
+          uv run python -c "
+          import benchmarks.runner.run_subprocess
+          import workflows.react_base
+          from agent_harness.scheduling.scheduler import Scheduler
+          from agent_harness.scheduling.workflow_loader import load_workflow_plugins
+          from agent_harness.core.types import PipelineEventType
+          from agent_harness.infra.config import AgentHarnessConfig
+          c = AgentHarnessConfig()
+          assert c.llm_provider == 'openai', c.llm_provider
+          assert c.openai_base_url.startswith(('https://', 'http://')), c.openai_base_url
+          print('OK')
+          "

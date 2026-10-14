@@ -1,0 +1,77 @@
+# FrontierScience-Research long-form scientific-report profile.
+# Provider endpoints and credentials are resolved from repository-root .env.
+
+behavior:
+  strategy: auto
+
+llm:
+  provider: openrouter
+  model: deepseek-v4.1-flash
+  temperature: 1.0
+  top_p: 0.95
+  max_tokens: 65536
+  high_effort_timeout_s: 600
+  extra_body:
+    reasoning_effort: high
+    provider:
+      only:
+        - deepseek
+      allow_fallbacks: false
+
+# Scientific reasoning and report composition use high effort. Instruction
+# generation, recovery, and summaries stay low. High-effort control calls retain
+# the existing 600-second timeout with low-effort fallback.
+reasoning_effort:
+  worker: high
+  coordinator: high
+  instruction_generation: low
+  leaf_synthesis: high
+  tree_synthesis: high
+  planner:
+    epoch_0: high
+    rebuild: high
+    audit: high
+    revision: high
+  recovery: low
+
+planner:
+  max_precursor_chars: 24000
+  max_single_summary_chars: 6000
+
+agent:
+  # ROOT depth 0; up to four research leaves plus one mandatory delivery leaf.
+  max_depth: 1
+  max_children: 5
+  max_rounds: 12
+  max_agents_per_round: 3
+  max_iterations: 24
+  subagent_max_turns: 70
+  progressive_fan_in: true
+  fan_in_grace_s: 30
+  # Scientific derivation reports use a bounded one-task operational budget.
+  leaf_timeout_s: 4800
+  question_timeout_s: 14400
+  finalization_reserve_s: 1200
+  max_rebuilds: 1
+  recovery_timeout_s: 300
+  forced_finalization_high_timeout_s: 600
+  min_rebuild_remaining_s: 1200
+  recovery_max_input_chars: 500000
+  recovery_capsule_chars: 24000
+  answer_format_timeout_s: 120
+
+web:
+  content_cache_enabled: false
+summary_llm:
+  allow_environment_fallback: false
+  provider: openrouter
+  model: deepseek-v4.1-flash
+  reasoning_effort: low
+  provider_routing:
+    only:
+      - deepseek
+    allow_fallbacks: false
+  retry_empty_or_length_with_thinking_disabled: true
+
+# The registered FSR scorer is the default rubric judge (no judge variant).
+# apply_process_settings maps these settings to OPENROUTER_* values from .env.

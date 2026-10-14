@@ -1,0 +1,15 @@
+# Routing uses its own model, endpoint/credentials and bounded decoding policy.
+llm:
+  provider: openrouter
+  model: deepseek-v4.1-flash
+  temperature: 1.0
+  top_p: 0.95
+  max_tokens: 16384
+  extra_body:
+    reasoning_effort: low
+    provider:
+      only: [deepseek]
+      allow_fallbacks: false
+behavior:
+  router_timeout_s: 600
+  router_max_tokens: 16384

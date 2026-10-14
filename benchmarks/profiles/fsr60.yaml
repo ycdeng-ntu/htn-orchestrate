@@ -1,0 +1,12 @@
+benchmark: frontier_science_research
+dataset:
+  subset: ../datasets/FrontierScience-Research/standardized_data.jsonl
+judge:
+  provider: openrouter
+  model: gpt-5.5
+  reasoning_effort: high
+  variant: agent_team_20260921
+web_policy:
+  blocked_domains: []
+  blocked_terms: []
+  network_enabled: false
